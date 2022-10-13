@@ -135,6 +135,42 @@ class Main{
 
 4.Kilometers to Meters
 
+Write a program to take the number of kilometers as input and convert into meters and print 
+the number of meters.
+Note: 1 Kilometer=1000 Meters
+
+Input 
+The first of input contains the number of the kilometers.
+The input will have a decimal part.
+
+Output
+The first line of output contains the number of meters.
+The output should be an integer
+
+Explanation
+For example, 1.2 kilometers is equals to 1200 meters
+
+Sample Input1
+1.2 
+Output
+1200
+
+Sample Input2
+3.5
+Output
+3500
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        float kilometers=input.nextFloat();
+        System.out.println((int)(kilometers*1000));
+        input.close();
+    }
+}
 
 
-4.

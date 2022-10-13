@@ -1,0 +1,90 @@
+1.Sum of The Digits-2
+
+Given an integer between 0 and 10000, write a program to print the sum of digits.
+
+Input 
+The first line of input will contain an integer
+
+Output 
+The first line of output should be the sum of the digits.
+
+Explanation
+For example, if the given number is 25,your code should print the sum of th digits (2+5) which is 7.
+For example, if the given number is 692,your code should print the sum of th digits (6+9+2) which is 17.
+For example, if the given number is 9999,your code should print the sum of th digits (9+9+9+9) which is 36.
+
+Sample Input1
+25
+Output
+7
+
+Sample Input2
+692
+Output
+17
+
+Sample Input2
+9999
+Output
+36
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        String numberAsString=input.nextLine();
+        int total=0;
+        int oneDigitNumber=numberAsString.length();
+        int twoDigitNumber=numberAsString.length();
+        int threeDigitNumber=numberAsString.length();
+        int fourDigitNumber=numberAsString.length();
+        if (oneDigitNumber==1){
+            total=Integer.parseInt(numberAsString);
+        }
+        else if(twoDigitNumber==2){
+         int ston=Integer.parseInt(numberAsString); 
+         total+=ston%10;
+         total+=ston/10;
+        }
+         else if(threeDigitNumber==3){
+         int ston=Integer.parseInt(numberAsString); 
+         total+=ston/100;
+         ston=ston%100;
+         total+=ston/10;
+         total+=ston%10;
+        }
+        else if(fourDigitNumber==4) {
+          int ston=Integer.parseInt(numberAsString);  
+         total+=ston/1000;
+         ston=ston%1000;
+         total+=ston/100;
+         ston=ston%100;
+         total+=ston/10;
+         total+=ston%10;
+        }
+        System.out.println(total);
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int sum=0;
+        while(a!=0){
+            sum+=a%10;
+            a/=10;
+        }
+        System.out.println(sum);
+    }
+}
+*/

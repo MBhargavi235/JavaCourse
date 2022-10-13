@@ -1,0 +1,338 @@
+1.Name of the Polygon
+
+Given the number of sides, write a program to print the name of the polygon.
+
+Input 
+The first line of input will contain an integer 
+
+Output
+If the given number of sides is less than 3, print Not Polygon.
+If the given number of sides is equal to 3, print Traingle.
+If the given number of sides is equal to 4, print Quadrilateral.
+If the given number of sides is equal to 5, print Pentagon.
+If the given number of sides is greater than 5, print Big Polygon.
+
+Explanation
+For example, if the given number of sides is 4, the output should be Quadrilateral.
+Similarly, if the given number of sides is 2,  the output should be Not a Polygon.
+
+Sample Input1
+4
+Output
+Quadrilateral
+
+Sample Input2
+2 
+Output
+Not Polygon
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a =input.nextInt();
+        if(a<3){
+            System.out.println("Not Polygon");
+        }
+        else if(a==3){
+            System.out.println("Triangle");
+        }
+        else if(a==4){
+            System.out.println("Quadrilateral");
+        }
+        else if(a==5){
+            System.out.println("Pentagon");
+        }
+        else{
+           System.out.println("Big Polygon"); 
+        }
+    }
+}
+
+2.Get Grades
+
+Write a program to find the grade of the student who scored marks.
+
+Input 
+The first line of input will contain a float.
+
+Output
+If the given marks are greater than 85, print A.
+If the given marks are greater than 70 and less than or equal to 85, print B.
+If the given marks are greater than or equal to 60 and less than or equal to 70, print C.
+If the given marks are less than 60, print F.
+
+Explanation
+For example, if the given marks of student are 70.5, your code should print the grade B.
+Similarly, if the marks of student are 90,  your code should print the grade A.
+
+Sample Input1
+70.5
+Output
+B
+
+Sample Input2
+90
+Output
+A
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        float a =input.nextFloat();
+        if(a>85){
+            System.out.println("A");
+        }
+        else if(a>70&&a<=85){
+            System.out.println("B");
+        }
+        else if(a>60&&a<=70){
+            System.out.println("C");
+        }
+        else{
+           System.out.println("F"); 
+        }
+    }
+}
+
+3.Greeting Message
+
+Write a program to print a greeting message based on the given time.
+
+Input
+The first line of input will be an integer.
+
+Output
+If the time is greater than or equal to 4 and less than 12, print the Good Morning.
+If the time is greater than or equal to 12 and less than 16, print the Good Afternoon.
+If the time is greater than or equal to 16 and less than 20, print the Good Evening.
+If the time is greater than or equal to 20 and less than 4, print the Good Night.
+
+Explanation
+For example, if the given time is 9, your code should print Good Morning.
+For example, if the given time is 14, your code should print Good Afternoon.
+
+Sample Input1
+9
+Output
+Good Morning
+
+Sample Input2
+14
+Output
+Good Afternoon
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a =input.nextInt();
+        if(a>=4&&a<12){
+            System.out.println("Good Morning");
+        }
+        else if(a>=12&&a<16){
+            System.out.println("Good Afternoon");
+        }
+        else if(a>=16&&a<20){
+            System.out.println("Good Evening");
+        }
+        else{
+           System.out.println("Good Night"); 
+        }
+    }
+}
+
+4.Get Season
+
+Write a program to find season for the given month number.
+
+Input
+The first line of input will contain an integer that indicates the number of the month.
+If the given number of the month is 3, that indicates March month.
+
+Output
+If the given month is either Novmber or December or January, print Winter.
+If the given month is either February or March, print Spring.
+If the given month is either April or May or June, print Summer.
+If the given month is either July or August, print Rainy.
+If the given month is either September or October, print Autumn.
+
+Explanation
+For example, if the given month is 1,which indicates January month, the output should be Winter.
+Similarly, if the given month is 4, which indicates April month, the output should be Summer.
+
+Sample Input1
+1
+Output
+Winter
+
+Sample Input2
+4
+Output
+Summer
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a =input.nextInt();
+        if(a==1||a==11||a==12){
+            System.out.println("Winter");
+        }
+        else if(a==2||a==3){
+            System.out.println("Spring");
+        }
+        else if(a==4||a==5||a==6){
+            System.out.println("Summer");
+        }
+        else if(a==7||a==8){
+            System.out.println("Rainy");
+        }
+        else{
+           System.out.println("Autumn"); 
+        }
+    }
+}
+
+5.Relation Between Two Numbers
+
+Given two integers A and B, write a program to print the relation between the two numbers.
+
+Input
+The first line of input will contain an integer.
+The second line of input will contain an integer.
+
+Output
+If A is equal to B, print A==B.
+If A is greater than B, print A>B.
+If A is less than B, print A<B.
+
+Explanation
+For example, if the given numbers are A is 3 and B is 4 where 3 is less than 4. So the output should be A<B.
+For example, if the given numbers are A is 4 and B is 4 where 4 is equal to 4. So the output should be A==B.
+
+Sample Input1
+3
+4
+Output
+A < B
+Sample Input2
+4
+4
+Output
+A == B
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a =input.nextInt();
+        int b =input.nextInt();
+        if(a==b){
+            System.out.println("A == B");
+        }
+        else if(a>b){
+            System.out.println("A > B");
+        }
+        else{
+           System.out.println("A < B"); 
+        }
+    }
+}
+
+6.Electricity Bill
+
+In this problem, you need to write a program to calculate the electricity bill for a household, based on 
+the units of electricity the household consumed. The price for unit varies based on the slab. The charges per unit for different slabs are mentioned below:
+
+Fir the first 50 units (0-50), the charge is 2/unit
+Fir the nextt 100 units (51-150), the charge is 3/unit
+Fir the nextt 100 units (151-250), the charge is 5/unit
+Fir the nextt 250 units (251 and above), the charge is 8/unit
+
+Apart from these charges, there is also an additional surcharge of 20% on the total amount is added to the bill.
+
+Input 
+The input will be a single line containing an integer.
+
+Output
+The output should be a single line containing the calculated bill amount.
+
+Explanation
+For example, if the given number of units is 50.
+
+Charges 2/unit for 0 to 50 units => 50,
+Charges 3/unit for 51 to 150 units => 0,
+Charges 5/unit for 151 to 250 units => 0,
+Charges 8/unit for 251 to above units => 0,
+--------------------------------------------
+Total                                   =>
+Surcharge (20% of Bill)                 =>100
+----------------------------------------------
+Bill                                    =>
+
+So the total bill should be 120.0 For example, if the given number of units 200.
+
+Charges 2/unit for 0 to 50 units => 50,
+Charges 3/unit for 51 to 150 units => 100,
+Charges 5/unit for 151 to 250 units => 50,
+Charges 8/unit for 251 to above units => 0,
+--------------------------------------------
+Total                                   =>
+Surcharge (20% of Bill)                 =>650
+----------------------------------------------
+Bill                                    =>
+
+So the total bill should be 780.0
+
+Sample Input1
+50 
+Output 
+120.0 
+
+Sample Input1
+200
+Output 
+780.0 
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a =input.nextInt();
+        int c=0;
+        if(a<50){
+            c=a*2;
+        }
+        else if(a<150){
+            c=(2*50)+(3*(a-50));
+        }
+        else if(a<250){
+            c=(2*50)+(3*100)+(5*(a-150));
+        }
+        else{
+           c= (2*50)+(3*100)+(5*100)+(8*(a-250));
+        }
+        float surcharge= (float)(c * 0.2);
+        System.out.println(c+surcharge);
+    }
+}

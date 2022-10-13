@@ -1,0 +1,21 @@
+1. Hello World
+
+Write a Program that takes a word W as input and prints "Hello" followed by the given word.
+
+SampleInput:
+World
+output:
+Hello World
+
+Solution:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner sc=new Scanner(System.in);
+        String word=sc.nextLine();
+        System.out.println("Hello "+word);
+    }
+}

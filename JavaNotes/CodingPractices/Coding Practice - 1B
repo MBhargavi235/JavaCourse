@@ -1,0 +1,128 @@
+1. Sum of two numbers
+
+Write a program to print the sum of two integer inputs A and B.
+
+Sample Input:
+2
+3
+
+Output:
+5
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        System.out.println(num1+num2);
+        sc.close();
+    }
+}
+
+2. Indexing
+
+Given a word W and integer N , Write a Progarm to character presrnt at the index N in the word W
+
+Input:
+First line contains the word W
+second line contains the Integer N
+
+Constraints:
+0<=N<len(W)
+
+Sample Input:
+Chocolate
+2
+
+Output:
+o
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String word=sc.nextLine();
+        int index=sc.nextInt();
+        System.out.println(word.charAt(index));
+        sc.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        int b=input.nextInt();
+        System.out.println(a.substring(b,b+1));
+    }
+}
+*/
+
+3.Last Character in the String
+
+Write a program which prints the last character of a given word
+
+Input:First line of Input contains the word.
+Output: First line of Ouput contains a single character.
+
+Sample Input1:
+January
+Output:
+y
+
+Sample Input2:
+Classroom
+Output:
+m
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String word=sc.nextLine();
+        System.out.println(word.charAt(word.length()-1));
+        sc.close();
+    }
+}
+
+4.Half String
+
+Write a program which prints the first half of the given input word.
+
+Sample Input1:
+Amazon
+Output:
+Ama
+
+Sample Input2:
+Bottle
+Output:
+Bot
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String word=sc.nextLine();
+        int len=word.length()/2;
+        System.out.println(word.substring(0,len));
+        sc.close();
+    }
+}
+

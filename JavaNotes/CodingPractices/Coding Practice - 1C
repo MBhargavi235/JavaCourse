@@ -174,3 +174,66 @@ class Main{
 }
 
 
+5. Length of the String 
+
+Write a program to read single line of input and print the number of characters in the input.
+Note Spaces are also characters.
+
+Explanation
+For example, if the given string is "Software" the number of characters are 8
+
+Sample Input1
+Software
+Output
+8
+
+Sample Input2
+Continuous Capacity Building Program
+Output
+36
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        System.out.println(a.length());
+        input.close();
+    }
+}
+
+6. First Three Characters
+
+Write a program to read a single line of input and print the first three characters in it
+
+Explanation
+For example, if the given input is "Four" the first three characters are "Fou"
+Similarly, the first three characters of "Strawberry" are "Str"
+
+Sample Input1
+Four
+Output
+Fou
+
+Sample Input2
+Strawberry
+Output
+Str
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        System.out.println(a.substring(0,3));
+        input.close();
+    }
+}
+
+

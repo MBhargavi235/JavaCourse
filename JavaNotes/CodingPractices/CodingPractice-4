@@ -180,7 +180,7 @@ Sample Input2
 Output
 Number is divisible by 3
 
-Sample Input1
+Sample Input3
 55
 Output
 Number is not divisible by 2,3 or 6
@@ -208,3 +208,71 @@ class Main {
         }
     }
 }
+
+5.Lucky Number-3
+
+Given a two-digit, print Lucky Number if any of the following conditions are satisfied
+1.The number is a multiple of 9
+2.One of the digits is 9
+Print Unlucky Number in all other cases.
+
+Input 
+The first line of input will contain an integer.
+The second line of input will contain an integer.
+
+Output
+If the any of above conditions are satisfied, print Lucky Number 
+In all other cases print Unlucky n.
+
+Explanation
+For example, if the given number is 18, which is 18, which is a multiple of 9, the output should be 
+Lucky Number.
+Whereas,if the given number is 13, which does not satisfy any of the conditions, the should be Unlucky Number.
+
+Sample Input1
+18
+Output
+Lucky Number
+
+Sample Input2
+13
+Output
+Unlucky Number
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String res=(a%10==9)||(a%10==9) ||(a%9==0)?"Lucky Number":"Unlucky Number";
+        System.out.println(res);
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String a1=String.valueOf(a.charAt(0));
+        String a2=String.valueOf(a.charAt(1));
+        int b=Integer.parseInt(a);
+        int b1=Integer.parseInt(a1);
+        int b2=Integer.parseInt(a2);
+        if(b%9==0||(b1==9) ||(b2==9)){
+         System.out.println("Lucky Number");   
+        }
+        else{
+           System.out.println("Unlucky Number"); 
+        }
+    }
+}
+*/

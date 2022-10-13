@@ -271,3 +271,219 @@ class Main {
         input.close();
     }
 }
+
+7.Valid Traingle
+
+Given three angles of a traingle, write a program to check whether the traingle is valid or not.
+A traingle is valid if the sum of its three angles is equal to 180 degrees.
+
+Input 
+The first line of input will contain the first angle of the traingle.
+The second line of input will contain the second angle of the traingle.
+The third line of input will contain the third angle of the traingle.
+
+Ouput
+If the sum of its three angles is equal to 180, print It's a Triangle.
+In all other cases print It's not a Triangle.
+
+Explanation
+For Example, if the first angle is 80, the second angle is 90, and the third angle is 100. Therefore
+the sum of three angles (80+90+100) is 270, which is not equal to 180. So the output should be 
+It's not a Triangle.
+Similarly, if the first angle is 60, the second angle is 60, and the third angle is 60. Therefore
+the sum of three angles (60+60+60) is 180, which is not equal to 180. So the output should be 
+It's a Triangle.
+
+Sample Input1
+80
+90
+100
+Output 
+It's not a Triangle
+
+Sample Input2
+60
+60
+60
+Output
+It's a Triangle
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=input.nextInt();
+        String res =(a+b+c==180)?"It's a Triangle":"It's not a Triangle";
+        System.out.println(res);
+        input.close();
+    }
+}
+
+8. Valid Triangle-2
+
+Given the lengths of three sides of triangle, write a program to check whether a valid triangle
+can be formed or not with the sides of given lengths.
+For a triangle to be valid, the sum of lengths of any two sides of the triangle must be greater than 
+the third side.
+
+Input
+The first line of input will contain the first side of triangle.
+The second line of input will contain the second side of triangle.
+The third line of input will contain the third side of triangle.
+
+Ouput
+If the sides can form a valid triangle 180, print It's a Triangle.
+In all other cases print It's not a Triangle.
+
+Explanation
+For Example, if the first side is 4, the second side is 5, and the third side is 3, then
+the sum of every two sides is greater than the third side:
+4+5>3
+5+3>4
+3+4>5
+So the output should be It's a Triangle.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=input.nextInt();
+        String res=(a+b>c&&b+c>a&&c+a>b)?"It's a Triangle":"It's not a Triangle";
+        System.out.println(res);
+        input.close();
+    }
+}
+
+9. Lucky Number 
+
+Given two integers, they are considered a lucky pair if any one of them is 6 or if their sum or difference
+is equal to 6.
+
+Input
+The first line of input will contains a number.
+The second line of input will contains a number.
+
+Ouput
+If the given conditions are satisfied, print Lucky.
+In all other cases print Not Lucky.
+
+Explanation
+For Example, if the given numbers are 6 and 1. One of the given two numbers is 6. So the output should be Lucky.
+Whereas, if the given numbers are 3 and 2.they do not satisfy any of the conditions. So the output should be Not Lucky.
+
+Sample Input1
+6 
+1 
+Output 
+Lucky
+
+Sample Input2
+3
+2 
+Output
+Not Lucky
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        String res=(a==6||b==6||a+b==6||a-b==6||b-a==6)?"Lucky":"Not Lucky";
+        System.out.println(res);
+        input.close();
+    }
+}
+
+10.Greatest Among Three Numbers
+
+Write a program which prints the greatest among the given three numbers.
+
+Input 
+The first line of input will contain a number.
+The second line of input will contain a number.
+The third line of input will contain a number.
+
+Output
+The output should be a single line containing the greatest among the three numbers.
+
+Explanation
+For example, if the given numbers are 2,5 and 7. Your code should print the greatest number, which is 7.
+
+Sample Input1
+2
+5
+7
+Output
+7
+
+Sample Input2
+3
+5
+2 
+Output
+5
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=input.nextInt();
+        if(a>b){
+            if(a>c)
+                System.out.println(a);
+            else
+                System.out.println(c);
+        }
+        else {
+            if (b>c)
+                System.out.println(b);   
+            else
+               System.out.println(c); 
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=input.nextInt();
+        if(a>b&&a>c){
+            System.out.println(a);
+        }
+        else if(b>c){
+         System.out.println(b);   
+        }
+        else{
+           System.out.println(c); 
+        }
+    }
+}
+*/

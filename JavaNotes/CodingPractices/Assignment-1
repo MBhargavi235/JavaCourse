@@ -1,0 +1,253 @@
+1.Masking-2
+
+Write a program that reads a single line of input and prints the first two and last two characters of the 
+given input and prints the asterisk character (*) in place of the remaining characters.
+
+Explanation
+For example, if the given is message, then the first two and last two characters are me, ge. Now 
+replacing all the remaining characters with * will give the output me***ge.
+
+Sample Input1
+message 
+Output:
+me***ge 
+
+Sample Input2:
+12345
+Output
+12*45
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=a.substring(0,2);
+        String c=a.substring(a.length()-2,a.length());
+        String d=(("*").repeat(a.length()-4));
+        System.out.println(b+d+c);
+    }
+}
+
+2.Eligibility Criteria-1
+
+Given a student has scored M marks in Maths, P marks in Physics and C marks in Chemistry.Write a program to check if a student is eligible for 
+admission in a professional course. If any one of below conditions is satisfied, then the student is eligible.
+
+1)M>=70 and P>=60 and C>=60
+2)M+P+C>=180
+
+Input 
+The first line is an integer M , the second line is an integer P, and the third line is an integer C.
+
+Output
+The output should be a single line containing True if it satisfies the given conditions, False in all other cases.
+
+Explanation
+Given M=0, P=100, C=100, the scoresof this student satisfies the second condition
+M+P+C>=180 (0+100+100>=180) So, the output should be True.
+
+Sample Input1
+0 
+100
+100
+Output:
+True
+
+Sample Input2:
+30
+40
+65
+Output
+False
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int p=input.nextInt();
+        int c=input.nextInt();
+        if((m>=70&p>=60&c>=70) ||(m+p+c>=180)){
+            System.out.println("True");
+        }
+        else{
+           System.out.println("False"); 
+        }
+    }
+}
+
+3.Eligibility Criteria-2
+
+Given a student has scored M marks in Maths, P marks in Physics and C marks in Chemistry. Write a program to check if a student is eligible for 
+admission in a professional course based on the following criteria:
+
+Sum of marks in any two subjects >=100 and M+P+C>=180
+
+Input 
+The first line is an integer M , the second line is an integer P, and the third line is an integer C.
+
+Output
+The output should be a single line containing True if it satisfies the given conditions, False in all other cases.
+
+Explanation
+Given M=82, P=55, C=45
+M+P>=100,(137>=100)
+M+C>=100 (127>=100)
+and, M+P+C>=180 (82+55+45>=180)
+So, the output should be True.
+
+Sample Input1
+82
+55
+45
+Output:
+True
+
+Sample Input2:
+71
+30
+70
+Output
+False
+
+Solution
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int p=input.nextInt();
+        int c=input.nextInt();
+        if((m+p>=100||m+c>=100||p+c>=100) &&(m+p+c>=180)){
+            System.out.println("True");
+        }
+        else{
+           System.out.println("False"); 
+        }
+    }
+}
+
+4.Eligibility Criteria-3
+
+Given a student has scored M marks in Maths, P marks in Physics and C marks in Chemistry. Write a program to check if a student is eligible for 
+admission in a professional course based on the following criteria:
+
+M >=35, P>=35, C>=35 and total in any of the two subjects >=90
+
+Input 
+The first line is an integer M , the second line is an integer P, and the third line is an integer C.
+
+Output
+The output should be a single line containing True if it satisfies the given conditions, False in all other cases.
+
+Explanation
+Given M=50, P=35, C=40
+M>=35,(50>=35)
+P>=35,(35>=35)
+C>=35,(40>=35)
+and,M+C>=90 (90>=90)
+So, the output should be True.
+
+Sample Input1
+50
+35
+40
+Output:
+True
+
+Sample Input2:
+35
+35
+100
+Output
+True
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int p=input.nextInt();
+        int c=input.nextInt();
+        if((m+p>=90||m+c>=90||p+c>=90) &&(m>=35&p>=35&c>=35)){
+            System.out.println("True");
+        }
+        else{
+           System.out.println("False"); 
+        }
+    }
+}
+
+5.Eligibility Criteria-4
+
+Given a student has scored M marks in Maths, P marks in Physics and C marks in Chemistry. Write a program to check if a student is eligible for 
+admission in a professional course. If any one of the below conditions is satisfied then student is eligible.
+
+1)M >=60, P>=50, C>=45 and M+P+C>=180
+2)Total in M and P >=120 or Total in C and P>=110
+
+Input 
+The first line is an integer M , the second line is an integer P, and the third line is an integer C.
+
+Output
+The output should be a single line containing True if it satisfies the given conditions, False in all other cases.
+
+Explanation
+
+Given M=72, P=65, C=51, the scores of this student satisfies the first condition
+M>=60,(72>=60)
+P>=50,(65>=50)
+C>=45,(51>=45)
+M+P+C>=180 (72+65+51>=180)
+So, the student is eligible.
+
+Sample Input1
+72
+65
+51
+Output:
+True
+
+Sample Input2:
+70
+0 
+70
+Output
+False
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int p=input.nextInt();
+        int c=input.nextInt();
+        if(((m>=60&p>=50&c>=45) &&(m+p+c>=180))||((m+p>=120)||(c+p>=110))){
+            System.out.println("True");
+        }
+        else{
+           System.out.println("False"); 
+        }
+    }
+}

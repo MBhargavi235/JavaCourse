@@ -454,7 +454,8 @@ int distance = 2036372;
 
 2.1.6 long
 
-The long data type is used to store large integers without any fractional part. It is used to store values that are bigger than int. The range of values is -263 to 263-1
+The long data type is used to store large integers without any fractional part. It is used to store values that are bigger than int. The range of values 
+is -263 to 263-1
 
 The long values should contain the suffix 'l' or 'L'
 
@@ -464,7 +465,8 @@ long area = 203637254L;
 
 2.1.7 float
 
-The float data type is used to store any number with a decimal point. The float data type stores a value up to 7 point precision (ex: 12.1234567). Hence, it is used when less precision is required.
+The float data type is used to store any number with a decimal point. The float data type stores a value up to 7 point precision (ex: 12.1234567). 
+Hence, it is used when less precision is required.
 
 The float values should contain the suffix 'f' or 'F'
 
@@ -474,7 +476,8 @@ float height = 5.10f;
 
 2.1.8 double
 
-The double data type is used to store any number with a decimal point. The double data type stores a value up to 16 point precision. Hence, it is used when more precision is required.
+The double data type is used to store any number with a decimal point. The double data type stores a value up to 16 point precision. Hence, 
+it is used when more precision is required.
 
 The double values may contain the suffix 'd' or 'D'
 
@@ -560,3 +563,447 @@ Rahul
 
 We will learn more about String, Class and Array later in the course.
 
+//3.Introduction to Java > BigIntegers | Reading Material//
+
+BigIntegers
+
+Concepts
+
+BigInteger
+Declaring a BigInteger
+Initialization
+BigInteger Methods
+Addition
+Subtraction
+Multiplication
+Division
+Exponentiation
+Type Conversions with BigIntegers
+Converting Integers to BigInteger
+Converting BigInteger to Integers or String
+BigInteger Constants
+
+Introduction
+
+In the previous unit, we learned about different data types like int, long, etc in Java. Using these data types we can store numbers of different ranges. 
+For example int (-231 to 231-1), long (-263 to 263-1), etc.
+
+In real-world applications, we may get use cases where we need to store large integers which int and long data types cannot handle. For example,
+the factorial of 21 is 51090942171709440000, which is too big for an int or long type to store.
+
+Example
+
+class Main {
+    public static void main(String[] args) {
+        long num = 51090942171709440000L;
+        System.out.println(num);
+    }
+}
+
+Output
+
+file.java:3: error: integer number too large
+        long num = 51090942171709440000L;
+        
+In the above example, the value of num is greater than 263-1 (range of long data type). So it results in an error.
+
+How to store large numbers in Java?
+
+Java provides a class called BigInteger to handle large numbers.
+
+Let's learn how to store large integers using the BigInteger class and perform different operations on them.
+
+1. BigInteger
+
+The BigInteger is the class used for mathematical operations which involve very big integer calculations that are outside the limit of all 
+available primitive data types.
+
+1.1 Declaring a BigInteger
+
+To declare the BigInteger variables we need to import the class BigInteger from java.math package.
+
+Syntax
+
+BigInteger bigNum;
+
+Here,
+
+BigInteger: is the class name.
+bigNum: is the name of the BigInteger variable.
+
+Code
+
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        BigInteger bigNum; // declaring bigNum as BigInteger variable
+    }
+}
+
+1.2 Initialization
+
+To initialize a BigInteger variable, we can use the new keyword.
+
+Syntax
+
+BigInteger bigNum = new BigInteger(str);
+
+Here,
+
+bigNum: is the variable name
+str: is the value to be passed as an argument. It should be of string data type.
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        String str = "51090942171709440000";
+        BigInteger bigNum = new BigInteger(str); // declaring bigNum as BigInteger variable and initializing it.
+
+        System.out.println(bigNum);
+    }
+}
+
+Output
+51090942171709440000
+
+2. BigInteger Methods
+
+In Java, arithmetic operators (+, -, *, /) are not permitted with BigIntegers, we have to use methods of BigInteger class to do these arithmetic operations.
+
+Another important aspect of BigIntegers is that they are immutable. This means that you cannot change the stored value of a BigInteger object, instead, you need to assign the changed value to a new variable.
+
+Let's see some of the methods of BigInteger.
+
+2.1 Addition
+
+The add() method performs the addition for the given two BigIntegers and returns the sum.
+
+Syntax
+
+bigNum1.add(bigNum2);
+
+Here, bigNum1 and bigNum2 should be BigIntegers.
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        BigInteger bigNum1 = new BigInteger("51090942171709440000");
+        BigInteger bigNum2 = new BigInteger("2432902008176640000");
+        BigInteger sum = bigNum1.add(bigNum2);
+
+        System.out.println("Sum of the BigIntegers = " + sum);
+        System.out.println("bigNum1 = " + bigNum1);
+        System.out.println("bigNum2 = " + bigNum2);
+    }
+}
+
+Output
+
+Sum of the BigIntegers = 53523844179886080000
+bigNum1 = 51090942171709440000
+bigNum2 = 24329020081766
+
+As we have learned earlier, the BigIntegers are immutable.
+
+From the above code we can see the BigIntegers are not changed, the add() method returned a new BigInteger which is stored in another BigInteger named as sum.
+
+2.2 Subtraction
+
+The subtract() method performs the subtraction for the given two BigIntegers and returns the difference.
+
+Syntax
+
+bigNum1.subtract(bigNum2);
+
+Here, bigNum1 and bigNum2 should be BigIntegers.
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        BigInteger bigNum1 = new BigInteger("51090942171709440000");
+        BigInteger bigNum2 = new BigInteger("2432902008176640000");
+
+        BigInteger difference = bigNum1.subtract(bigNum2);
+
+        System.out.println(difference);
+    }
+}
+
+Output
+48658040163532800000
+
+2.3 Multiplication
+The multiply() method performs the multiplication for the given two BigIntegers and returns the product.
+
+Syntax
+
+bigNum1.multiply(bigNum2);
+
+Here, bigNum1 and bigNum2 should be BigIntegers.
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        BigInteger bigNum1 = new BigInteger("51090942171709440000");
+        BigInteger bigNum2 = new BigInteger("2432902008176640000");
+
+        BigInteger product = bigNum1.multiply(bigNum2);
+
+        System.out.println(product);
+    }
+}
+
+Output
+124299255809188481393766275481600000000
+
+2.4 Division
+
+The divide() method performs the division for the given two BigIntegers and returns the quotient.
+
+Syntax
+
+bigNum1.divide(bigNum2);
+
+Here, bigNum1 and bigNum2 should be BigIntegers.
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        BigInteger bigNum1 = new BigInteger("124299255809188481393766275481600000000");
+        BigInteger bigNum2 = new BigInteger("2432902008176640000");
+
+        BigInteger quotient = bigNum1.divide(bigNum2);
+
+        System.out.println(quotient);
+    }
+}
+
+Output
+
+51090942171709440000
+
+2.5 Exponentiation
+
+The pow() method performs the exponentiation for the given BigInteger
+
+It returns the result of the bigNumexponent
+
+Syntax
+
+bigNum.pow(exponent);
+
+Here,
+
+bigNum: should be a BigInteger
+exponent: should be of int data type, exponent should be greater than or equal to 0. If the exponent is less than 0, then an error will be thrown.
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        BigInteger bigNum = new BigInteger("632");
+        int exp = 16;
+        BigInteger power = bigNum.pow(exp); // gives result as (num)^exp
+
+        System.out.println(power);
+    }
+}
+
+Output
+
+647848194136825331389866418130111944223358976
+
+3. Type Conversions with BigIntegers
+
+3.1 Converting Integers to BigInteger
+
+The valueOf() method can be used to convert integers (i.e., int or long) values to a BigInteger. It accepts a single parameter and returns a BigInteger.
+
+We will learn more about Type Conversions later in the course.
+
+The syntax for initializing a BigInteger variable using the valueOf() method is as follows:
+
+Syntax
+
+BigInteger.valueOf(num);
+
+Here, num is the number to be converted as a BigInteger. It should be of long data type. If an int data type is provided, it will be implicitly converted to long.
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        int num = 2022;
+        long longNum = 435468567463L;
+
+        BigInteger bigNum1 = BigInteger.valueOf(num);
+        BigInteger bigNum2 = BigInteger.valueOf(longNum);
+
+        System.out.println(bigNum1);
+        System.out.println(bigNum2);
+    }
+}
+
+Output
+2022
+4354685674
+
+3.2 Converting BigInteger to Integers or String
+
+We can convert BigInteger to int, long, and String data types using the following methods,
+
+intValue()
+longValue()
+doubleValue()
+floatValue()
+toString()
+
+For all data types other than String, when converting BigIntegers to other data types, we must ensure that the number falls within the range of that data type
+(i.e., int, long, etc).
+
+3.2.1 Converting BigInteger to int Type
+
+We can use the intValue() method to convert a BigInteger to an int data type.
+
+Syntax
+
+bigNum.intValue();
+
+Code
+
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        int num = 2022;
+        BigInteger bigNum1 = BigInteger.valueOf(num);
+
+        num = bigNum1.intValue();
+
+        System.out.println(num);
+    }
+}
+
+Output
+2022
+
+In the above code, we can see that the int value is initially converted to BigInteger and later using the intValue() method the BigInteger is converted 
+to int and assigned the int value to the variable num.
+
+Similarly, we can convert BigInteger to long, float, double, and String data types.
+
+Let's look at the below example,
+
+Code
+ 
+import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        String str = "45900";
+        BigInteger bigNum1 = new BigInteger(str);
+
+        str = bigNum1.toString();
+        long longNum = bigNum1.longValue();
+        float floatNum = bigNum1.floatValue();
+        double doubleNum = bigNum1.doubleValue();
+
+        System.out.println(str);
+        System.out.println(longNum);
+        System.out.println(floatNum);
+        System.out.println(doubleNum);
+    }
+}
+
+Output
+
+45900
+45900
+45900.0
+45900.0
+
+4. BigInteger Constants
+
+The BigInteger class defines some constants for the ease of initialization.
+
+BigInteger.ZERO: The BigInteger constant for 0
+BigInteger.ONE: The BigInteger constant for 1
+BigInteger.TWO: The BigInteger constant for 2
+BigInteger.TEN: The BigInteger constant for 10
+Let's look at defining the BigInteger variables using BigInteger constants.
+
+Code
+ 
+ import java.math.BigInteger;
+
+class Main {
+    public static void main(String[] args) {
+        BigInteger bigNum0 = BigInteger.ZERO;
+        BigInteger bigNum1 = BigInteger.ONE;
+        BigInteger bigNum2 = BigInteger.TWO;
+        BigInteger bigNum10 = BigInteger.TEN;
+
+        System.out.println(bigNum0);
+        System.out.println(bigNum1);
+        System.out.println(bigNum2);
+        System.out.println(bigNum10);
+    }
+}
+
+Output
+
+0
+1
+2
+10
+
+Instead of using a constructor new BigInteger(), we can directly assign these constants to BigInteger variables.
+
+We can use these constant values without defining them.
+
+Summary
+
+The valueOf() method converts a long value to a BigInteger value and returns it.
+
+BigInteger Methods:
+
+add(): It performs the addition for the given two BigIntegers and returns the sum.
+subtract(): It performs the subtraction for the given two BigIntegers and returns the difference.
+multiply(): It performs the multiplication for the given two BigIntegers and returns the product.
+divide(): It performs the division for the given two BigIntegers and returns the quotient.
+pow(): It performs the exponentiation operation and returns the result.
+
+Type Conversions with BigIntegers:
+
+intValue(): It converts BigInteger to an int value and returns it.
+longValue(): It converts BigInteger to a long value and returns it.
+floatValue(): It converts BigInteger to a float value and returns it.
+doubleValue(): It converts BigInteger to a double value and returns it.
+toString(): It converts BigInteger to a String value and returns it.
+
+BigInteger Constants:
+
+BigInteger.ZERO: The BigInteger constant 0
+BigInteger.ONE: The BigInteger constant 1
+BigInteger.TWO: The BigInteger constant 2
+BigInteger.TEN: The BigInteger constant 10

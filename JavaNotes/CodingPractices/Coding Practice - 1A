@@ -2,7 +2,7 @@
 
 Write a Program that takes a word W as input and prints "Hello" followed by the given word.
 
-SampleInput:
+Sample Input:
 World
 output:
 Hello World
@@ -17,5 +17,206 @@ class Main {
         Scanner sc=new Scanner(System.in);
         String word=sc.nextLine();
         System.out.println("Hello "+word);
+        sc.close();
     }
 }
+
+2. Print the Input
+
+Write a program that reads a single line of Input and print the given input.
+
+Sample Input1:
+Bat
+output:
+Bat
+
+Sample Input2:
+5
+output:
+5
+
+Solution:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner sc=new Scanner(System.in);
+        String word=sc.nextLine();
+        System.out.println(word);
+        sc.close();
+    }
+}
+
+3.Print the Input-2
+
+For this problem you need to write code and read a single line of Input and print the line after message "Given input:"
+
+Sample Input1:
+Happy Coding
+output:
+Given input: Happy Coding
+
+Sample Input2:
+Tech Foundations
+output:
+Given input: Tech Foundations
+
+Solution:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Given input: ");
+        String word=sc.nextLine();
+        System.out.println(word);
+        sc.close();
+    }
+}
+
+4.Second Line
+
+For this problem you need to write code and read a two lines of Input and print the second line of input.
+
+Sample Input1:
+Fundamentals
+Python
+output:
+Pyhton
+
+Sample Input2:
+Tom
+Jerry
+output:
+Jerry
+
+Solution:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner sc=new Scanner (System.in);
+        String first=sc.nextLine();
+        String second=sc.nextLine();
+        System.out.println(second);
+        sc.close();
+    }
+}
+
+5. Print in Reverse Order
+
+Write a program that reads a two lines of Input and print those two lines in the reverse order 
+(Print the message in the second line of input before the first line of input)
+
+Sample Input1:
+Book
+Pen
+output:
+Pen
+Book
+
+Sample Input2:
+4
+5
+output:
+5
+4
+
+Solution:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner sc=new Scanner (System.in);
+        String first=sc.nextLine();
+        String second=sc.nextLine();
+        System.out.println(second);
+        System.out.println(first);
+        sc.close();
+    }
+}
+
+6.String Repetition
+
+Write a Program to print the given input word N times in a single line seperated by space.
+
+Sample Input1:
+pen
+2
+output:
+pen pen
+
+Sample Input2:
+Good Day
+3
+output:
+Good Day Good Day Good Day
+
+Solution:
+
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String first=sc.nextLine();
+        String last=first+" ";
+        int count=sc.nextInt();
+        System.out.println((last).repeat(count));
+    }
+}
+
+7. Reverse the Digits
+
+For this problem you need to write code and read a single line of Input, which is a two digit integer, and print the two digit number by reversing the digits in it.
+
+Sample Input1:
+21
+output:
+12
+
+Sample Input2:
+60
+output:
+06
+
+Soultion:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        String num=input.nextLine();
+        String b=String.valueOf(a.charAt(1));
+        String c=String.valueOf(a.charAt(0));
+        System.out.println(b+c);
+    }
+}
+
+My Method:
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=String.valueOf(a.charAt(1));
+        String c=String.valueOf(a.charAt(0));
+        System.out.println(b+c);
+    }
+}
+*/

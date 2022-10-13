@@ -232,3 +232,342 @@ class Modulus {
 Output
 1
 0
+
+//2.Introduction to Java > Variables and Data Types | Reading Material//
+
+Variables and Data Types
+Concepts
+
+Variables
+Declaring a Variable
+Initializing a Variable
+Defining a Variable
+Data Types
+Primitive Data Types
+Non-Primitive Data Types
+ 
+
+Introduction
+
+In this unit, we will learn some basics of Java, like storing information (integers, characters, sequence of characters, etc) and the data types that 
+are supported by Java.
+
+1. Variables
+
+Variables are like containers for storing information.
+
+1.1 Declaring a Variable
+
+A Variable is created when it is declared, and to declare a variable, we must specify the type of data first, followed by the variable name.
+
+Syntax
+
+dataType variableName;
+
+dataType: It specifies the type of information we are storing in the variable.
+variableName: It will say about the name given to the variable for storing that information.
+
+The Java programming language is statically-typed, which means that all variables must first be declared before they can be used.
+
+For example, to store information of an integer we need to declare a variable using the keyword int
+
+Later in this module, we will learn different data types that Java supports to store information
+
+Naming Convention: In Java, the programmers generally follow camel case notation. Whereas in Python, snake case notation is followed.
+
+Comparison with Python
+
+Java:
+
+Camel case notation is followed	
+Examples: firstName, lastName
+
+Python
+
+Snake case notation is followed
+Examples: first_name, last_name
+
+1.2 Initializing a Variable
+
+Assigning a value to a variable for the first time is called Initialization. Memory is allocated when a variable is initialized.
+
+Code
+class Main {
+    public static void main(String[] args) {
+       int points;  // Declaration
+       points = 90;  // Initialization, information is assigned to the variable 'points'
+    }
+}
+
+A variable is only a name given to a memory location. All the operations done on the variable affect that memory location
+
+1.3 Defining a Variable
+Declaring and initializing a variable in a single statement is called Defining a variable.
+
+Code
+
+class Main {
+    public static void main(String[] args) {
+       int points;  // Declaration
+       points = 90;  // Initialization
+       int totalPoints = 100;  // Definition
+
+       System.out.println(points);
+       System.out.println(totalPoints);
+    }
+}
+
+Output
+90
+100
+
+Comparison with Python
+
+points = 90
+print(points)
+
+Output
+90
+
+Java executes the code line-by-line
+
+Code
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println(points);
+        int points = 90;
+    }
+}
+
+Output
+
+file.java:3: error: cannot find symbol
+        System.out.println(points);
+                           ^
+  symbol:   variable points
+  location: class Main
+1 error
+
+Variable points is not created by the time we tried to print.
+As Java programming language is a statically typed language. So before using the points variable we must declare it.
+
+2. Data Types
+
+In programming languages, every value or data has an associated type known as data type.
+
+Java supports various data types. These data types are categorized into,
+
+Primitive Data Types
+Non-Primitive Data Types
+
+2.1 Primitive Data Types
+
+Primitive data types are those that are predefined by the programming language (Java)
+
+Below are the primitive data types in Java,
+
+boolean
+char
+byte
+short
+int
+long
+float
+double
+
+Data types determine how the value or data can be used in the program. For example, mathematical operations can be done on integers (i.e., int, float, etc).
+
+2.1.1 boolean
+
+In a general, anything that can take one of two possible values is considered a Boolean. Examples include the data that can take values like
+
+True or False
+Yes or No
+0 or 1
+On or Off, etc.
+
+As per the Java Syntax, true and false are considered Boolean values.
+
+Comparison with Python
+
+Java
+
+true
+false
+
+Python
+
+True
+False
+
+Code
+
+class Main {
+    public static void main(String[] args) {
+        boolean canLearn = true;
+        System.out.println(canLearn);
+    }
+}
+
+Output
+true
+
+Note: In Java, every program begins with the main method of a class. Use the above code template to practice declaring various types of variables.
+
+
+2.1.2 char
+
+The char data type is used to store a single character. A char value must be represented using single quotes, like 'A'.
+
+Code
+
+char alphabet = 'A';
+
+2.1.3 byte
+
+The byte data type is used to store integers (positive, negative and zero) without any fractional part. It is used to store small values. The range of 
+values is -128 to 127.
+
+Code
+
+byte points = 100;
+
+2.1.4 short
+
+The short data type is used to store integers without any fractional part. It is used to store values that are bigger than a byte. The range of 
+values is -32,768 to 32,767.
+
+Code
+
+short number = 28745;
+
+2.1.5 int
+
+The int data type is used to store integers without any fractional part. It is used to store values that are bigger than short. The range of values is -231 to 231-1.
+
+Code
+
+int distance = 2036372;
+
+2.1.6 long
+
+The long data type is used to store large integers without any fractional part. It is used to store values that are bigger than int. The range of values is -263 to 263-1
+
+The long values should contain the suffix 'l' or 'L'
+
+Code
+
+long area = 203637254L;
+
+2.1.7 float
+
+The float data type is used to store any number with a decimal point. The float data type stores a value up to 7 point precision (ex: 12.1234567). Hence, it is used when less precision is required.
+
+The float values should contain the suffix 'f' or 'F'
+
+Code
+
+float height = 5.10f;
+
+2.1.8 double
+
+The double data type is used to store any number with a decimal point. The double data type stores a value up to 16 point precision. Hence, it is used when more precision is required.
+
+The double values may contain the suffix 'd' or 'D'
+
+Code
+
+double length = 5.112;
+double breadth = 9.2345D;
+
+Data Type	         Size (in bits)	                 Range of Values	                Example
+ boolean	              1	                            true, false	                 true, false
+ byte	                 8	                            -128 to 127	                 100, -126
+ char	                 16	                     ASCII values from 0 to 255	        'a', '7'
+ short	                16	                          -215 to 215-1	                -24456, 4532
+ int	                  32	                          -231 to 231-1	                -2036372537, 4500
+ long                 	64	                          -263 to 263-1	                 3847539L, 8589934592L
+ float	                32	                     up to 7 decimal points	             1.23f, 5.67F
+ double	               64	                     up to 16 decimal points	            1.23456d, 5.6789D
+
+2.2 Non-Primitive Data Types
+
+These data types are used to store multiple values. non-primitive data types are defined by the programmer.
+
+In Java programming, all non-primitive data types are simply called objects.
+
+Some commonly used non-primitive data types are,
+
+String (String is the keyword)
+Class (class is the keyword)
+Array
+
+2.2.1 String
+
+The String data type is simply a sequence of characters. For example, "Rahul" is a string which consists of the characters 'R', 'a', 'h', 'u', and 'l'.
+
+In Java, double quotes (") are used to represent a string.
+
+Code
+
+String name = "Rahul";
+
+Comparison with Python
+
+Java
+
+Strings are represented using double quotes ("). Characters are represented using single quotes (').
+Examples: "Rahul", 'a'	
+
+Python
+
+Both strings and characters can be represented using either single quotes or double quotes
+Examples: "Rahul", "a", 'Ajay'
+
+
+Possible Mistake
+
+Double quotes (") are used to represent a string in Java. Using single quotes (') for strings results in an error.
+
+Incorrect Code
+
+class Main {
+    public static void main(String[] args) {
+        String name = 'Rahul';
+        System.out.println(name);
+    }
+}
+
+Output:
+
+file.java:3: error: unclosed character literal
+        String name = '
+        
+Correct Code
+
+class Main {
+    public static void main(String[] args) {
+        String name = "Rahul";
+        System.out.println(name);
+    }
+}
+
+Output
+Rahul
+
+We will learn more about String, Class and Array later in the course.
+
+
+
+
+
+Double quotes (") are used to represent a string in Java. Using single quotes (') for strings results in an error.
+
+Incorrect Code
+JAVA
+Output
+Correct Code
+JAVA
+Output
+We will learn more about String, Class and Array later in the course.

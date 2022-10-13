@@ -302,6 +302,7 @@ class Main {
 A variable is only a name given to a memory location. All the operations done on the variable affect that memory location
 
 1.3 Defining a Variable
+
 Declaring and initializing a variable in a single statement is called Defining a variable.
 
 Code
@@ -350,6 +351,7 @@ file.java:3: error: cannot find symbol
 1 error
 
 Variable points is not created by the time we tried to print.
+
 As Java programming language is a statically typed language. So before using the points variable we must declare it.
 
 2. Data Types
@@ -558,16 +560,3 @@ Rahul
 
 We will learn more about String, Class and Array later in the course.
 
-
-
-
-
-Double quotes (") are used to represent a string in Java. Using single quotes (') for strings results in an error.
-
-Incorrect Code
-JAVA
-Output
-Correct Code
-JAVA
-Output
-We will learn more about String, Class and Array later in the course.

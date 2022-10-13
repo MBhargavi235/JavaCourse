@@ -277,27 +277,29 @@ The output should be a single line containing the calculated bill amount.
 Explanation
 For example, if the given number of units is 50.
 
-Charges 2/unit for 0 to 50 units => 50,
-Charges 3/unit for 51 to 150 units => 0,
-Charges 5/unit for 151 to 250 units => 0,
-Charges 8/unit for 251 to above units => 0,
---------------------------------------------
-Total                                   =>
-Surcharge (20% of Bill)                 =>100
-----------------------------------------------
-Bill                                    =>
+Charges 2/unit for 0 to 50 units       => 50x2 = 100
+Charges 3/unit for 51 to 150 units     => 0x3  = 0
+Charges 5/unit for 151 to 250 units    => 0x5  = 0
+Charges 8/unit for 251 to above units  => 0x8  = 0
+-------------------------------------------------------
+Total                                   =>        100
+Surcharge (20% of Bill)                 =>100x0.2=20
+--------------------------------------------------------
+Bill                                    =>          120
+--------------------------------------------------------
 
 So the total bill should be 120.0 For example, if the given number of units 200.
 
-Charges 2/unit for 0 to 50 units => 50,
-Charges 3/unit for 51 to 150 units => 100,
-Charges 5/unit for 151 to 250 units => 50,
-Charges 8/unit for 251 to above units => 0,
---------------------------------------------
-Total                                   =>
-Surcharge (20% of Bill)                 =>650
-----------------------------------------------
-Bill                                    =>
+Charges 2/unit for 0 to 50 units       => 50x2 = 100
+Charges 3/unit for 51 to 150 units     => 100x3= 300
+Charges 5/unit for 151 to 250 units    => 50x5 = 250
+Charges 8/unit for 251 to above units  => 0x8  = 0
+------------------------------------------------------
+Total                                   =>        650
+Surcharge (20% of Bill)                 =>650x0.2=780
+-------------------------------------------------------
+Bill                                    =>         780
+--------------------------------------------------------
 
 So the total bill should be 780.0
 

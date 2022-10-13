@@ -950,6 +950,7 @@ BigInteger.ZERO: The BigInteger constant for 0
 BigInteger.ONE: The BigInteger constant for 1
 BigInteger.TWO: The BigInteger constant for 2
 BigInteger.TEN: The BigInteger constant for 10
+
 Let's look at defining the BigInteger variables using BigInteger constants.
 
 Code
@@ -1007,3 +1008,101 @@ BigInteger.ZERO: The BigInteger constant 0
 BigInteger.ONE: The BigInteger constant 1
 BigInteger.TWO: The BigInteger constant 2
 BigInteger.TEN: The BigInteger constant 10
+
+Introduction to Java > Sequence of Instructions | Reading Material
+Sequence of Instructions
+Concepts
+Reassigning the Variables
+The Final Keyword
+Expression
+Statements
+Block of Code
+Introduction
+In this unit, we will learn a few more concepts of Java and understand the order of arithmetic calculations.
+
+1. Reassigning the Variables
+The values of variables in Java can also be reassigned (modified) as in Python.
+
+Code
+JAVA
+Output
+In the above program, the value of the variable a is reassigned to 2
+
+2. The final Keyword
+The final keyword is used for variables, classes and methods, which makes them non-changeable (impossible to inherit or override).
+
+The final keyword is useful when you want a variable to always store the same value, like PI (3.14159...).
+
+2.1 The final Variables
+When the final keyword is used with a variable, it indicates that the variable is constant and the value of it cannot be reassigned (cannot be changed).
+
+Example 1:
+
+Code
+JAVA
+Output
+Naming Convention: The naming convention for the final variables is a bit different from normal variables. Generally, programmers follow uppercase letters with words separated by underscore(_). For example, SPEED_LIMIT, MAX_PRICE, etc.
+
+What if the final variable value is changed?
+
+Code
+JAVA
+Output
+ 
+An error will be thrown. As we learned earlier the value of final variables cannot be changed.
+
+3. Expression
+An expression is a valid combination of values, variables and operators.
+
+Examples:
+
+a * b
+a + 2
+5 * 2 + 3 / 4
+3.1 BODMAS
+The standard order of evaluating an expression
+
+Brackets (B)
+Orders (O)
+Division (D)
+Multiplication (M)
+Addition (A)
+Subtraction (S)
+Code
+JAVA
+Output
+4. Statements
+A statement forms a complete unit of execution. In Java, the expressions can be made into a statement by terminating the expression with a semicolon (;).
+
+Code
+JAVA
+Output
+Statement without semicolon (;)
+
+Code
+JAVA
+Output
+5. Block of Code
+A Block of code consists of zero or more statements enclosed between balanced brackets ({}).
+
+Code
+JAVA
+Comparison with Python
+5.1 Indentation
+Indentation refers to the spaces at the beginning of a code line. It increases the code readability.
+
+In Java, as a best practice, we use four spaces for indentation.
+
+5.2 Missing curly braces ({ or })
+Code
+JAVA
+Output
+In the above program, the closing curly brace } is missing for the Main class (i.e, the braces are not balanced).
+
+Summary
+
+In Java, variables can be reassigned.
+The final variables cannot be reassigned.
+BODMAS: The standard order of evaluating an expression.
+In Java, statements are terminated with a semicolon(;).
+In Java, a block of code is enclosed between balanced brackets ({}).

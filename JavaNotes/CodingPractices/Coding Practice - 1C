@@ -1,0 +1,140 @@
+1.Basic Arithmetic
+
+Write a program to take two integer inputs (say A and B) and print the result of the following operations
+
+1.Addition
+2.Subtraction
+3.Multiplication
+
+Output
+The first line should contain the sum of two given integers.
+The second line should contain the Subtraction od the two given integers.
+The third line should contain the product of the two given integers.
+
+Explanation
+In the given example, the inputs are A=4 and B=3
+Addition 4+3=7
+Subtraction 4-3=1
+Multiplication 4*3=12
+
+Sample Input1:
+4
+3
+Output
+7
+1
+12
+
+Sample Input2:
+2
+5
+Output
+7
+-3
+10
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        System.out.println(a+b);
+        System.out.println(a-b);
+        System.out.println(a*b);
+        input.close();
+    }
+}
+
+2.Area of Rectangle
+
+Write a program to calculate the area of the Rectangle.
+Note:Area of Rectangle=Length of Rectangle x Breadth of Rectangle
+
+Input 
+The first line of input contains the length of the rectangle, which is an integer.
+The second line of the input contains the breadth of the rectangle, which is an integer.
+
+Output
+Print the Area of Rectangle
+
+Explantion
+
+For example when the length is 4 and breadth is 3, then A=3x4, therefore A=12.
+
+Sample Input1:
+3
+4
+Output
+12
+
+Sample Input2:
+5
+3
+Output
+15
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        System.out.println(a*b);
+        input.close();
+    }
+}
+
+3.Perimeter of Rectangle
+
+Write a program to calculate the perimetr of a rectangle.
+Note: Perimeter of Rectangle=2(Length of Rectangle+Breadth of Rectangle)
+
+Input 
+The first line of input contains the length of the rectangle, which is an integer.
+The second line of the input contains the breadth of the rectangle, which is an integer.
+
+Ouput
+Print the Perimeter of Rectangle
+
+Explanation
+For example when the length is 3 and breadth is 4, then 
+Perimeter=2x(3+4)=2x7=14.
+
+Sample Input1:
+3
+4
+Output
+14
+
+Sample Input2:
+5
+3
+Output
+16
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        System.out.println(2*(a+b));
+        input.close();
+    }
+}
+
+4.Kilometers to Meters
+
+
+
+4.

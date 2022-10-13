@@ -190,7 +190,7 @@ class Main{
         Scanner input=new Scanner(System.in);
         String line=input.nextLine();
         int num=input.nextInt();
-        if(num==line.length()-1){
+        if(num>line.length()-1){
         System.out.println(line); 
         }
         else{

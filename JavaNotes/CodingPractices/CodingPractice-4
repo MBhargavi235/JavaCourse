@@ -1,0 +1,210 @@
+1.Even or Odd 
+
+Write a program to check if the given number is even or odd.
+
+Input 
+The input will be a single line containing an integer.
+
+Output
+If the given number is even, print Even. If it is odd, print Odd.
+
+Explanation
+For example, if the given number is 4, which is divisible by 2, the output should be Even.
+For example, if the given number is 3, which is not divisible by 2, the output should be Odd.
+
+Sample Input1
+4
+Output
+Even
+
+Sample Input2
+3
+Output
+Odd
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String res=(a%2==0)?"Even":"Odd";
+        System.out.println(res);   
+        input.close();
+    }
+}
+
+2.Special Eleven 
+
+A number is called Special Even, if it is a multiple of 11 or if it is one more than a multiple of 11. 
+Write a program to check if the given number is a Special Eleven.
+
+Input 
+The input will be a single line containing an integer.
+
+Output
+If the given input satifies the above conitions, print Special Eleven. In all other cases print Normal Number.
+
+Explanation
+For example, if the given number is 22, which is multiple of 11, the output should be Special Eleven.
+For example, if the given number is 15, which does not satisfy any of the conditions, the output should be Normal Number.
+
+Sample Input1
+22
+Output
+Special Eleven
+
+Sample Input2
+23
+Output
+Special Eleven
+
+Sample Input3
+15
+Output
+Normal Number
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String res=(a%11==0 || a%11==1)?"Special Eleven":"Normal Number";
+        System.out.println(res);   
+        input.close();
+    }
+}
+
+3.Special Number
+
+Write a program to read a single line of input, which is two-digit integer and Print Special Number
+if any one of the following conditions are satisfied 
+1.The sum of digits is 7
+2.One of the digits is 7
+3.The number is a multiple of 7
+Print Normal Number in all other cases
+
+Input 
+The first line of input contains a two-digit integer.
+
+Output
+If the given input satisfies the above conditions, print Special Number. In all other cases Normal Number.
+
+Explanation
+For example, if the given two-digit integer is 67. As one of its digits is 7, the output should be Special Number.
+whereas, if the given two-digit integer is 36. As it does not satisfy any of the above conditions, the output should be Normal Number.
+
+Sample Input1
+67
+Output
+Special Number
+
+Sample Input2
+36
+Output
+Normal Number
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String student=((a/10+a%10==7)||(a%7==0)||(a/10==7) ||(a%10==7))?"Special Number":"Normal Number";
+        System.out.println(student);   
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String a1=String.valueOf(a.charAt(0));
+        String a2=String.valueOf(a.charAt(1));
+        int b=Integer.parseInt(a);
+        int b1=Integer.parseInt(a1);
+        int b2=Integer.parseInt(a2);
+        if(b%7==0||b1+b2==7||(b1==7) ||(b2==7)){
+         System.out.println("Special Number");   
+        }
+        else{
+           System.out.println("Normal Number"); 
+        }
+    }
+}
+*/
+
+4.Lucky Number-2
+
+Write a program to print if the given number is divisible by any of the lucky numbers 6,3,2 in 
+decreasing order of priority (6 is luckier than 3 is 3 is luckier than 2).
+
+Print Number is divisible by followed by the luckiest number among the above 3 which can divide the number.
+Print Number is not divisible by 2,3 or 6 if the number is not divisible by any of them.
+
+Input 
+The input while be a single line containing a positive number.
+
+Output
+If the given number is divisible by 6, print Number is divisible by 6
+If the given number is divisible by 3, print Number is divisible by 3
+If the given number is divisible by 2, print Number is divisible by 2
+In all other cases print Number is not divisible by 2,3 or 6.
+
+Explanation
+In the example 126 is divisible by 2,3 or 6 
+But 6 takes precedence because 6 is luckiest among the three. So the output should be the Number is divisible by 6.
+
+Sample Input1
+126
+Output
+Number is divisible by 6 
+
+Sample Input2
+27
+Output
+Number is divisible by 3
+
+Sample Input1
+55
+Output
+Number is not divisible by 2,3 or 6
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        if(a%6==0){
+         System.out.println("Number is divisible by 6");   
+        }
+       else if(a%3==0){
+         System.out.println("Number is divisible by 3");   
+        }
+         else if(a%2==0){
+         System.out.println("Number is divisible by 2");   
+        }
+        else{
+           System.out.println("Number is not divisible by 2, 3 or 6"); 
+        }
+    }
+}

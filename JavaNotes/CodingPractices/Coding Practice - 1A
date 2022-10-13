@@ -197,10 +197,10 @@ class Main {
     public static void main(String[] args) { 
         // Write your code here
         Scanner input=new Scanner(System.in);
-        String num=input.nextLine();
-        String b=String.valueOf(a.charAt(1));
-        String c=String.valueOf(a.charAt(0));
-        System.out.println(b+c);
+        int num=input.nextInt();
+        String b=String.valueOf(num%10);
+        String a=String.valueOf(num/10);
+        System.out.println(b+a);
     }
 }
 

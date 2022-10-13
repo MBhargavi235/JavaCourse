@@ -1,0 +1,224 @@
+1.Validate Password
+
+Write a program to read a line of input and print True if the length of the password is greater than 7.
+
+Input 
+The first line of input contains a word 
+
+Output
+The first line of output contains either True or False
+
+Explanation
+For example, if the given input is "passwd", which is less than 7, so the output should be False
+
+Sample Input1
+passwd
+Output 
+False
+
+Sample Input2
+1q2w3e4r
+Output
+True
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=(a.length()>7)?"True":"False";
+        System.out.println(b);
+        input.close();
+    }
+}
+
+2.Between 25 and 75
+
+Write a program to read a single line of input, which is integer and print True 
+if the integer is between 25 and 75.
+
+Input 
+The first line of input contains a integer 
+
+Output
+The first line of output contains a boolean value (either "True" or "False")
+
+Explanation
+For example, if the given input integer is 20, which is not in between 25 and 75, 
+so the output should be False
+
+Sample Input1
+20
+Output 
+False
+
+Sample Input2
+45
+Output
+True
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String b=(a>25&&a<75)?"True":"False";
+            System.out.println(b);
+            input.close();
+    }
+}
+
+3. Masking
+
+Write a program to read a single line of input and prints the first and last characters of the
+given input and print the * in place of the remaining characters.
+
+Input 
+The first line of input contains the word
+
+Output
+The first line of output contains the masked word
+
+Explanation
+For example, if the given input word is qwerty@2020, the output should be q*********0
+
+Sample Input1
+qwerty@2020
+Output 
+q*********0
+
+Sample Input2
+9647329032
+Output
+9********2
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String start=String.valueOf(a.charAt(0));
+        String middle=("*").repeat(a.length()-2);
+        String end=String.valueOf(a.charAt(a.length()-1));
+        System.out.println(start+middle+end);
+    }
+}
+
+4. Exam Result
+
+Write a program to reads the student marks as input and print PASS if the student has scored
+more than 50, in all other cases print FAIL.
+
+Input 
+The first line of input is an integer.
+
+Output
+The first line of output is the result of student.(either PASS or FAIL)
+
+Explanation
+In the given example, the student marks are 85, which is more than 50,
+so the result should be PASS.
+
+Similarly, if the marks=45, the result should be FAIL.
+
+Sample Input1
+85
+Output 
+PASS
+
+Sample Input2
+45
+Output
+FAIL
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String b=(a>50)?"PASS":"FAIL";
+        System.out.println(b);  
+        input.close();
+    }
+}
+
+6.Skipping Letters
+
+Write a program to read two lines of input and print the word after removing the character at the given index.
+
+Input 
+The first line of input contains the word.
+The second line of input contains the index.
+
+Output
+The first line of output should be the word after removing the character at the given index.
+
+Explanation
+For example, if the given word is "Combine", after removing the character at index, which is "i", 
+so the Output should "Combne".
+
+Sample Input1
+Combine
+4 
+Output 
+Combne
+
+Sample Input2
+Globe
+2
+Output
+Glbe
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String line=input.nextLine();
+        int num=input.nextInt();
+        if(num==line.length()-1){
+        System.out.println(line); 
+        }
+        else{
+           System.out.println(line.substring(0,num)+line.substring(num+1)); 
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        int b=input.nextInt();
+        int lena=a.length();
+        if(lena==b){
+        String c=a.substring(0,b); 
+        System.out.println(c);
+        }
+        else{
+            String d=a.substring(0,b); 
+            String e=a.substring(b+1);
+           System.out.println(d+e); 
+        }
+    }
+}
+
+*/

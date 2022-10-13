@@ -1,0 +1,234 @@
+Introduction to Programming with Java
+
+Concepts
+
+What is Java?
+Applications & Career Opportunities with Java
+Hello World Program in Java
+Arithmetic Operations in Java
+Addition
+Subtraction
+Multiplication
+Division
+Modulo Operation
+ 
+
+1. Introduction
+
+In this course, you will be introduced to a new programming language called Java. The following sessions assume that you understand the fundamental concepts
+of programming and are comfortable writing code in Python. This is a fast-paced course compared to Programming Foundations with Python where the fundamentals 
+are explained in much more detail. So, please revise our Python course once, before proceeding further.
+
+1.1 What is Java?
+
+Java is a popular object-oriented programming language. It was created in 1995 and is owned by Oracle.
+
+Java is a secure, fast, and powerful programming language. Java works on different platforms (Windows, Mac, Linux, etc.). It has huge community support 
+(tens of millions of developers).
+
+1.2 Why learn another Programming Language?
+
+Python is an extremely good language to start learning programming for various reasons. It has a simple syntax and a powerful standard library. 
+This simplicity and power of Python have attracted a huge developer community who have built a wide variety of third-party libraries that simplify 
+a lot of programming tasks.
+
+So this brings us to the question, why learn another programming language?
+
+Different programming languages have different strengths. Some languages are good for quickly writing small scripts, some are better suited for working on
+a large-scale project involving multiple developers. The same feature of the programming language which brings certain advantages in some aspects may also 
+bring disadvantages in other aspects.
+
+Python - A Dynamic Programming Language
+
+Python belongs to a class of programming languages called dynamic languages. The syntax of this category of languages is considered a bit informal. 
+Informal in the sense that a data type of a variable or return type of a function/method, etc., is never explicit or formally pre-defined. You can directly 
+assign a value to a variable and later assign a value of a different type to the same variable. This informality simplifies the syntax and makes it easy to
+write Python code. But this also means the programmer has to remember certain things. It is up to the developer to ensure that the right type of value exists 
+in a variable when a particular method is called. If the developer misses these types of things, the code will run into exceptions during runtime.
+
+Java - A Static Programming Language
+
+On the other hand, we have programming languages like C, C++, and Java that are more formal. These are often referred to as static programming languages. 
+These languages protect you by forcing you to be upfront and formal about the kind of object each variable is going to contain in its lifetime. As the developer
+mentions the data types of the variables upfront, before using them, these languages could use this knowledge to
+
+report some of the possible errors to the developer before the code is executed.
+optimize functionalities to different data types and thereby increase performance and speed of execution.
+
+You may even notice a performance improvement of 5x - 10x when the same logic is written in Java or C++ instead of Python.
+
+As a developer, you should understand the strengths of different languages and should be able to use the appropriate language as per the needs of the project 
+at hand. There are certain features like variables, conditionals, loops, functions, etc. that most programming languages have in common. So when learning 
+a new programming language you should focus on differences in syntax. You should try to compare different aspects of the new programming language with 
+different programming languages that you already know to understand what is common among them and what are the key differences.
+
+1.3 Why learn Java instead of C/C++?
+
+For a Python programmer, it is easier to learn Java when compared to C++
+
+Java includes a larger standard library than C/C++
+The syntax of Java is less complicated than the syntax of C++
+Java is usually considered to be halfway between C/C++ and Python in terms of performance, and ease of programming. This balance has made Java an attractive 
+option for many enterprises. Java was considered the most popular programming language for more than 20 years (until the early 2020s).
+
+With Java, it is possible to easily develop Cross-Platform applications. The same Java application can be run on different Operating Sytems like Windows, 
+Ubuntu, etc. which is not possible with C/C++. (You will learn more about this later.)
+
+1.4 Applications & Career Opportunities with Java
+
+Java can be used to develop a wide variety of applications.
+
+Mobile Applications
+Web-based and Desktop Applications
+Server-Based Applications, etc.
+
+As Java has been the primary language of choice for many enterprises for quite some time, there are multiple job roles that require developers who can program in Java.
+
+Java Developer
+Java Architect
+Java Web Developer
+Java Android Developer, etc.
+
+2. Hello World Program in Java
+
+Below is the code to display the message "Hello World!" in Java.
+
+Code
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+
+Output
+Hello World!
+
+Java is a programming language that incorporates the concepts of Object-Oriented programming to the fullest. Every Java program must define a new class. 
+The execution of the program starts from a method named main in this class. You can directly use other predefined classes or import classes from the standard library.
+Now let us dive into the above Java code.
+
+In the above Hello World program, HelloWorld is the name of the class. You can define a new class using the class keyword.
+
+Syntax
+
+class NameOfTheClass {
+
+}
+
+Naming Convention: In both Java and Python, the programmers generally follow pascal case notation for naming classes.
+We define the method and attributes of that class within the curly braces {}.
+
+Note: Just as we use indentation in Python to mention that the following code belongs to class definition or method definition. We use curly braces {} in Java.
+
+In the line, public static void main(String[] args) we are defining a method with the name main. Every Java application must consist of a method called main. 
+It serves as an entry point for the application (The code execution begins from the main method). The next set of curly braces contains the implementation of 
+the main method
+
+We will learn the meanings of the keywords public, static, void and String[] later in the course.
+
+In Java, System.out.println() statement is used to print a line of output to the console.
+
+System is a class from the core library provided by Java.
+out is an object that controls the output.
+println() is a method associated with that object that receives a single argument.
+
+3. Arithmetic Operations in Java
+
+3.1 Addition
+
+Addition is denoted by + sign. It gives the sum of two numbers.
+
+Code
+
+class Addition {
+    public static void main(String[] args) {
+        System.out.println(2 + 5);
+        System.out.println(1 + 1.5);
+    }
+}
+
+
+Output
+ 7
+ 2.5
+ 
+3.2 Subtraction
+
+Subtraction is denoted by - sign. It gives the difference between the two numbers.
+
+Code
+
+class Subtraction {
+    public static void main(String[] args) {
+        System.out.println(5 - 2);
+    }
+}
+
+Output
+3
+
+3.3 Multiplication
+
+Multiplication is denoted by * sign. It gives the product of two numbers.
+
+Code
+
+class Multiplication {
+    public static void main(String[] args) {
+        System.out.println(5 * 2);
+        System.out.println(5 * 0.5);
+    }
+}
+
+Output
+10
+2.5
+
+3.4 Division
+
+Division is denoted by / sign. It returns the quotient as a result.
+
+In contrast to Python which returns a float, Java returns an integer. During division, Python internally converts the integer values to float data type. 
+The conversion of one data type to another data type is called Type Conversion.
+
+We will learn more about Type Conversions later in the course.
+
+Code
+
+class Division {
+    public static void main(String[] args) {
+        System.out.println(5 / 2);
+        System.out.println(4 / 2);
+    }
+}
+
+Output
+2
+2
+
+Comparison with Python
+
+print(5 / 2)
+print(4 / 2)
+
+Output
+2.5
+2
+
+3.5 Modulo Operation
+
+Modulo is denoted by % sign. It returns the modulus (remainder) as a result.
+
+Code
+
+class Modulus {
+    public static void main(String[] args) {
+        System.out.println(5 % 2);
+        System.out.println(4 % 2);
+    }
+}
+
+Output
+1
+0

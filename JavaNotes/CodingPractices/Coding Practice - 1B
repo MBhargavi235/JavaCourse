@@ -126,3 +126,150 @@ class Main{
     }
 }
 
+5.String Repetition-2
+
+Write a program to read two lines of input and print the word multiplied by the given number of times
+
+Input
+The first line of input contains the word
+The second line of input contains the number of times to be repeated
+
+Output:
+The first line of output contains the given word repeated by given number of lines.
+
+Explanation
+For example, if the given input
+word=Maths
+n=2
+So the output should be MathsMaths
+
+
+Sample Input1
+Maths
+2
+Output
+MathsMaths
+
+Sample Input2
+Hand
+6
+Output
+HandHandHandHandHandHand
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String name=sc.nextLine();
+        int count=sc.nextInt();
+        System.out.println(name.repeat(count));
+        sc.close();
+    }
+}
+
+6.String Repetition-3
+
+Given a word and a number (N), write a program to print the last three characters of the word N times 
+in a single line.
+
+Input 
+The first line of input contains the word.
+The second line of input contains the number of times to be repeated.
+
+Output
+The first line of output contains the last three characters of the given word repeated by N times.
+Note:There should not be any spaces between the repetitions.
+
+Explanation
+
+For Example, if the given input is "Transport" and the n=2, the last three characters are "ort",
+so the output should be "ortort"
+
+Sample Input1:
+Transport
+2
+Output 
+ortort
+
+Sample Input2
+Glass
+4
+Output
+assassassass
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String name=sc.nextLine();
+        int count=sc.nextInt();
+        int length=name.length();
+        String lastThreeCharacters=name.substring(length-3,length);
+        System.out.println(lastThreeCharacters.repeat(count));
+    }
+}
+
+7.Sum of Digits
+
+Write a program to read a single line of input, which is a three-digit number, and print the sum of 
+the three digits in the given number.
+
+Input
+The first line of input contains a three-digit number.
+
+Output
+The first line of output contains the sum of three digits in the given number.
+
+Explanation
+
+For example, the given number is 326, the sum of digits is 11.
+
+Sample Input1:
+326
+Output 
+11
+
+Sample Input2
+222
+Output
+6
+
+Solution:
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String number=input.nextLine();
+        int a=Integer.parseInt(String.valueOf(number.charAt(0)));
+        int b=Integer.parseInt(String.valueOf(number.charAt(1)));
+        int c=Integer.parseInt(String.valueOf(number.charAt(2)));
+        System.out.println(a+b+c);
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=a.substring(0,1);
+        String c=a.substring(1,2);
+        String d=a.substring(2);
+        int e=Integer.parseInt(b);
+        int f=Integer.parseInt(c);
+        int g=Integer.parseInt(d);
+        System.out.println(e+f+g);
+    }
+}
+
+*/

@@ -1,0 +1,273 @@
+1.Greatest Among Two Numbers
+
+Write a program to print the greatest among the two numbers. 
+
+Input 
+The first line of input contains a number.
+the second line of input contains a number.
+
+Output
+The output should be a single line containing the greatest among the two numbers.
+
+Explanation
+For example, if the given numbers are 4 and 3, your code should print the greatest number which is 4.
+
+Sample Input1
+4
+3
+Output:
+4
+
+Sample Input2:
+7
+5
+Output
+7
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int res=(a>b)?a:b;
+            System.out.println(res);
+    }
+}
+
+2.Equal Numbers
+
+Write a program to check if the given two numbers are equal. 
+
+Input 
+The first line of input contains a number.
+the second line of input contains a number.
+
+Output
+If the given numbers are equal, print "Equal". In all other cases, print "Not Equal".
+
+Explanation
+For example, if the first number is 5 and the second number is 5. Since both the given numbers are equal. So the output should be "Equal".
+Whereas, if the first number is 10 and the second number is 5, both the numbers are not equal. So the output should be "Not Equal".
+
+Sample Input1
+5
+5
+Output:
+Equal
+
+Sample Input2:
+10
+5
+Output
+Not Equal
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        String res=(a==b)?"Equal":"Not Equal";
+            System.out.println(res);
+        input.close();
+    }
+}
+
+3. Positive or Negative
+
+Write a program to find if the given number is positive, negative or zero. 
+
+Input 
+The first line of input contains a number.
+
+Output
+If the given number is greater than zero, print "Positive".
+If the given number is less than zero, print "Negative".
+If the given number is equal to zero, print "Zero".
+
+Explanation
+For example, if the given number is -12 which is less than zero. So the output should be Negative.
+Similarly, if the given number is 15, which is greater than zero. So the output should be Positive.
+
+Sample Input1
+-12
+Output:
+Negative
+
+Sample Input2:
+15
+Output
+Positive
+
+Sample Input3
+0
+Output
+Zero
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        if(a>0){
+            System.out.println("Positive");
+        }
+        else if(a<0){
+            System.out.println("Negative");
+        }
+        else{
+           System.out.println("Zero"); 
+        }
+    }
+}
+
+4. Vote eligiblity
+
+A person is eligible to vote if his/her age at least 18 years. Write a program that checks if a person is eligible to vote based on the person's age. 
+
+Input 
+The input will be a number denoting the person's age in years.
+
+Output
+If the person's age is at least 18, print Eligible.
+In all other cases, print Not Eligible.
+
+Explanation
+A person is eligible to vote if his/her is 18 years or above .
+For example, if the person's age is 15, which is below 18. So the output should be Not Eligible.
+Whereas if the person's age is 21, which is above 18. So the output should be Eligible.
+
+Sample Input1
+15
+Output:
+Not Eligible
+
+Sample Input2:
+21
+Output
+Eligible
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String res=(a>=18)?"Eligible":"Not Eligible";
+            System.out.println(res);
+        input.close();
+    }
+}
+
+5. Square or Reactangle
+
+Given the length and breadth of a box, check if it is a Reactangle or Square. 
+
+Input 
+The first line of input will contain the length of the box.
+The second line of input will contain the breadth of the box.
+
+Output
+If the given length and breadth are equal, print Square.
+In all other cases, print Reactangle.
+
+Explanation
+For example, if the given length is 6, and the given breadth is 6, the length and breadth
+are equal.So the output should be Square.
+Similarly if the given length is 5, and the given breadth is 10, the length and breadth
+are not equal.So the output should be Reactangle.
+
+Sample Input1
+6
+6
+Output:
+Square
+
+Sample Input2:
+5
+10
+Output
+Rectangle
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        String res =(a==b)?"Square":"Rectangle";
+        System.out.println(res);
+        input.close();
+    }
+}
+
+6. Bonus Salary
+
+A Company decided to give bonus of 5% to an employee if his/her years of service is more than five years. 
+Write a program that reads an employee's salary and years of service and decides whether the employee gets the bonus or not.
+
+Input 
+The first line of input will contain the salary of an employee.
+The second line of input will contain years of service.
+
+Output
+If the employee gets a bonus, print the net bonus amount.
+If the employee doesn't get the bonus, No Bonus.
+
+Explanation
+For example, if the employee's salary is 25000 and years of experience is 3. As the years of experienceis less than 5, the output should be No Bonus.
+Similarly if the employee's salary is 50000 and years of experience is 6, As the years of experienceis more than 5, the employee is eligible for the bonus. 
+BY computing the 5% of his salary, the net bonus amount should be 2500.0
+
+Sample Input1
+25000
+3
+Output:
+No Bonus
+
+Sample Input2:
+50000
+6
+Output
+2500.0
+
+Solution:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        if(b>5){
+            float newSal=(float)(0.05*a);
+            System.out.println(newSal);
+        }
+        else{
+           System.out.println("No bonus"); 
+        }
+        input.close();
+    }
+}

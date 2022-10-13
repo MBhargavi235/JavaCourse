@@ -1,0 +1,174 @@
+I/O Basics > Input and Output Basics | Reading Material
+Input and Output Basics
+Concepts
+Packages
+Importing a Package
+Importing a Class
+Input and Output
+Reading User Input using Scanner Class
+Printing Output
+Introduction
+In every programming language, there is a need for a repeated use of a set of statements which together perform a certain task.
+
+Instead of repeating these statements everytime, we instead group these into certain methods and call these methods to perform the tasks.
+
+In Java, these methods are written within classes which are further contained within packages.
+
+In this unit, we will learn what are packages and how we can use them to read inputs from the user and print the output.
+
+1. Package
+In Java, a package is a group of related classes, sub-packages, etc. Packages can be conceptually compared to different folders (also called directories) on your computer.
+
+The package consists of re-usable code, which eliminates the need for the programmer to write the same code several times.
+
+Java provides a number of built-in packages. For example,
+
+java.lang
+java.util
+java.net, etc.
+To utilize a package or a specific class, we need to use import keyword.
+
+1.1 Importing a Package
+To import a complete package with all its classes, we can use the syntax given below .
+
+Code
+JAVA
+Using an asterisk (*) imports a whole package along with all the classes contained within.
+
+1.2 Importing a Class
+Java also gives us the option of importing a specific class from a package based on our requirements.
+
+The below statement imports the Scanner class from the java.util package.
+
+Code
+JAVA
+You can think of a package's folder structure like this:
+
+All the Java files have an extension of .java. The Scanner.java file consists of the Scanner class.
+
+Here, the Scanner.java file is located in the util folder and the util is located in the java folder.
+
+2. Reading User Input using Scanner Class
+The Scanner class in the package java.util is used to read user input.
+
+Code
+ 
+JAVA
+Expand
+Input & Output
+Here, calling new Scanner() will return an object and it is assigned to the variable named input
+
+The System.in parameter is used to read input from the standard input (i.e., keyboard).
+
+nextLine() method is used to read a String value till the end of line.
+
+Calling input.close(), closes the Scanner object input. We cannot read the user input once it is closed.
+
+It is a good programming practice to explicitly close the Scanner using the close() method once you are done using it.
+
+Comparison with Python
+
+2.1 Input Types
+The Scanner object provides various methods that allow us to read inputs of different data types.
+
+Following are the methods, used to read different types of inputs from the user:
+
+Method	Description
+nextInt()	Reads an int value
+nextLong()	Reads a long value
+nextFloat()	Reads a float value
+nextBoolean()	Reads a boolean value
+next()	Reads a String value only until a space(" ") is encountered
+nextLine()	Reads a String value till the end of line
+nextDouble()	Reads a double value
+nextShort()	Reads a short value
+nextByte()	Reads a byte value
+2.2 Reading char input from the User
+Scanner class does not have a specific method to read character input from the user.
+
+To read a char, we use next().charAt(0)
+
+The next() method reads the input as a string and charAt(0) (string method) returns the first character of the string.
+
+We will learn more about String Methods later in the course.
+
+Code
+ 
+JAVA
+Expand
+Input
+Output
+2.3 Reading Multiple Inputs from User
+A single Scanner object can be used for reading multiple inputs of various data types from the user.
+
+Code
+ 
+JAVA
+Expand
+Input
+Output
+2.4 Reading Multiple Inputs in a Single Line
+Java can read multiple inputs from a single line, in contrast to Python, which reads the entire line as a single input.
+
+Code
+ 
+JAVA
+Expand
+Input
+Output
+As we learned, nextInt() reads an integer value only until a space(" ") or new line is encountered.
+
+3. Printing Output
+So far, we have learned to accept input from the user, let's take a look at different methods available to print the output to the console.
+
+print()
+println()
+The System class in java.lang package is used to access the print() and the println() methods.
+
+The java.lang package is the default package in Java and will be imported by default. Therefore, there is no need to import this package explicitly.
+
+3.1 print()
+The print() accepts a value as a parameter and prints text on the console. It prints the result in the same line.
+
+Code
+JAVA
+Output
+Comparison with Python
+
+3.2 println()
+The println() accepts a value as a parameter and prints text on the console. It prints the result in the new line.
+
+Code
+
+class Main {
+    public static void main(String[] args) {
+        String greetings = "Hello";
+        String name = "Rahul";
+        System.out.println(greetings);
+        System.out.println(name);
+    }
+}
+
+Output
+
+Hello
+Rahul
+
+Comparison with Python
+
+greetings = "Hello"
+name = "Rahul"
+print(greetings)
+print(name)
+
+Output
+
+Hello
+Rahul
+
+Summary
+
+import keyword is used to import packages in Java.
+Scanner class is used to read input from the user and it provides different methods for taking different input types from the user.
+print() and the println() methods are used to print output to the console.
+print() function prints in the same line whereas, println() function goes to new line after printing.

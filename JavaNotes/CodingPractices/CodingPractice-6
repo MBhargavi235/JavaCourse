@@ -88,3 +88,183 @@ class Main {
     }
 }
 */
+
+2.Sample Calculator
+
+Write a program to create a menu driven calculator that performs basic arithmetic operations(+,-,*,/, and %).
+
+Input
+Thr first line of input will contain a single character (+,-,*,/, and %).
+The second line of input will contain an integer.
+The third line of input will contain an integer.
+
+Output
+If the given operator is +, print the sum of two numbers.
+If the given operator is -, print the result of the substraction of the two numbers.
+If the given operator is *, print the result of the multiplication of the two numbers.
+If the given operator is /, print the result of the divison of the two numbers.
+If the given operator is %, print the result of the modulus operation of the two numbers.
+
+Explanation
+For example, if the given operator is + and the two numbers are 3 and 5. As it is an addition operator, 
+your code should print the sum of the given two numbers (3+5), which is 8.
+Similarly, if the given operator is * and the two numbers are 2 and 5. As it is a multipliaction operator,
+your code should print the result of the multipliaction of the given two numbers (2*5), which is 10.
+Similarly, if the given operator is - and the two numbers are 10 and 9. As it is a substraction operator,
+your code should print the result of the substraction of the given two numbers (10-9), which is 1.
+
+Sample Input1
++
+3
+5
+Output
+8
+
+Sample Input2
+*
+2 
+5
+Output
+10 
+
+Sample Input3
+- 
+10 
+9 
+Output
+1 
+
+Solution 
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        char a = input.next().charAt(0);
+        int b=input.nextInt();
+        int c=input.nextInt();
+        int sum=0;
+        if(a=='+'){
+        System.out.println(b+c);
+        }
+        else if(a=='-'){
+           System.out.println(b-c); 
+        }
+        else if(a=='*'){
+           System.out.println(b*c); 
+        }
+        else if(a=='/'){
+           float d=b/c;
+           System.out.println(d); 
+        }
+        else{
+            System.out.println(b%c);
+        }
+    }
+}
+
+3.Denominations
+
+Write a program to find the minimum number of notes required for the given amount 
+Available note denominations are 100, 50, 10, 1.
+
+Input
+The input will be a single line containing an integer.
+
+Output
+The first line of output should contain the number of 100 notes, print 100:a.
+The second line of output should contain the number of 50 notes, print 50:b.
+The third line of output should contain the number of 10 notes, print 10:c.
+The fourth line of output should contain the number of 1 notes, print 1:d.
+
+In place of (a,b,c,d) print the count of corresponding notes.
+
+Explanation
+For example, if the given amount is 250.
+So the output should be 
+100:2 
+50:1 
+10:0 
+1:0 
+
+Sample Input1
+893
+Output
+100:8
+50:1 
+10:4
+1:3
+
+Sample Input1
+250
+Output
+100:2
+50:1 
+10:0
+1:0
+
+Sample Input1
+692
+Output
+100:6
+50:1 
+10:4
+1:2
+
+Solution 
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int num=input.nextInt();
+        int a=num/100;
+        num=num%100;
+        int b=num/50;
+        num=num%50;
+        int c=num/10;
+        num=num%10;
+        int d=num;
+        System.out.println("100:"+a);
+        System.out.println("50:"+b);
+        System.out.println("10:"+c);
+        System.out.println("1:"+d);
+        input.close();
+    }
+}
+
+/*import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int amount=input.nextInt();
+        int notes_100=0;
+        int notes_50=0;
+        int notes_10=0;
+        int notes_1=0;
+        if(amount>=100){
+            notes_100=amount/100;
+            amount=amount%100;
+        }
+        if(amount>=50){
+            notes_50=amount/50;
+            amount=amount%50;
+        }
+        if(amount>=10){
+            notes_10=amount/10;
+            amount=amount%10;
+        }
+        notes_1=amount;
+        System.out.println("100:"+String.valueOf(notes_100));
+        System.out.println("50:"+String.valueOf(notes_50));
+        System.out.println("10:"+String.valueOf(notes_10));
+        System.out.println("1:"+String.valueOf(notes_1));
+    }
+}
+*/

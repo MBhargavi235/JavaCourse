@@ -1,0 +1,638 @@
+1.Prime Number 
+
+Write a pogram to check whether the given number is Prime number or not.
+A Prime Number is a  number that is divisible only by itself and one.
+
+Input 
+THe input will be a single line containing an integer.
+
+Output
+The output will be a single line containing either Prime Number or Not a Prime Number.
+
+Explanation
+For example, if the given number is 5, the output should be Prime Number, as it is divisible only by itself and one.
+Whereas, if the given number is 6, the output should be Not a Prime Number, as it is divisible by 1,2,3, and 6.
+
+Sample Input1
+5
+Output
+Prime Number
+
+Sample Input2
+6
+Output
+Not a Prime Number
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int num=input.nextInt();
+        int count=0;
+        for(int i=2;i<num;i++){
+            if(num%i==0){
+                count+=1;
+            }
+        }
+        if (count==0){
+            System.out.println("Prime Number");
+        }
+        else{
+            System.out.println("Not a Prime Number");
+        }
+    }
+}
+
+2.Shuffle String 
+
+Given a string and N integers, where N is the length of the string, 
+write a pogram to print the string after shuffling the characters as per the order of the integers given.
+
+Input 
+Te first line of input will contain a string.
+The next N lines will contain an integer in each line.
+
+Output
+The output should be a single line containing the shuffled string.
+
+Explanation
+For example, if the string is "goindc", the read the inputs in the next six lines 
+(length of the string is six). If the given input integers in the next lines are 5,1,4,2,3, and 0.
+By shuffling the word as per the given order.
+
+5-c
+1-o
+4-d
+2-i
+3-n
+o-g
+
+The output should be "coding".
+
+Sample Input1
+goindc
+5
+1 
+4 
+2 
+3 
+0
+Output
+coding
+
+Sample Input2
+eimag
+1 
+2 
+3 
+4 
+0
+Output
+image
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String shuffle=input.nextLine();
+        for(int i=0;i<shuffle.length();i++){
+            int inputValue=input.nextInt();
+            System.out.print(shuffle.substring(inputValue, inputValue+1));
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b="";
+        for(int i=0;i<a.length();i++){
+            int c=input.nextInt();
+            char d=a.charAt(c);
+            b+=d;
+        }
+        System.out.println(b);
+    }
+}
+*/
+
+3.Word Triangle
+
+Given a word,write a pogram to print the substrings in the expected pattern of N rows, where N is the length of the word.
+
+Input 
+The input will be a sinle line containing a string.
+
+Output
+The output should be N rows containing each substring in a new line.
+
+Explanation
+For example, if the given word is "Rahul", your code should print the substrings of the word.
+
+R 
+Ra 
+Rah 
+Rahu 
+rahul
+
+Sample Input1
+Rahul
+Output
+R 
+Ra 
+Rah 
+Rahu 
+rahul
+
+Sample Input2
+Workbench
+Output
+W 
+Wo 
+Wor 
+Work 
+Workb 
+Workbe 
+Workben 
+Workbenc 
+Workbench
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String word=input.nextLine();
+        for(int i = 0; i< word.length(); i++) {
+            System.out.println(word.substring(0,i+1));
+        }
+        input.close();
+    }
+}
+
+4.Hollow Rectangle
+
+Given two integers M and N,write a pogram to print a hollow rectangle pattern of M rows and N columns using the asterisk character(*).
+
+Input 
+The first line of input will contain a positive integer.
+The second line of input will contain a positive integer.
+
+Output
+The output should be M number of lines and N number of columns with the asterisk character(*) at the borders and spaces inside the border.
+Note:There is a space after each asterisk character(*).
+
+Explanation
+For example, if the given numbers of rows are 4 and the number of columns is 6, your code should print the following pattern.
+
+* * * * * *
+*         *
+*         *
+* * * * * *
+
+For example, if the given numbers of rows are 8 and the number of columns is 5, your code should print the following pattern.
+
+* * * * *
+*       *
+*       *
+*       *
+*       *
+*       *
+*       *
+* * * * *
+
+Sample Input1
+4
+6
+Output
+* * * * * *
+*         *
+*         *
+* * * * * *
+
+Sample Input2
+8
+5
+Output
+* * * * *
+*       *
+*       *
+*       *
+*       *
+*       *
+*       *
+* * * * *
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int n=input.nextInt();
+        for(int i = 1; i<=m; i++) {
+            if (i==1 || i==m){
+                System.out.println("* ".repeat(n));
+            }
+            else{
+                System.out.println("* "+"  ".repeat(n-2)+"* ");
+            }
+        }
+    }
+}
+
+5.Numbers in Square Pattern-1
+
+Write a pogram to print numbers from 1 to N in each row dorming a square pattern of N rows and N columns.
+
+Input 
+The input will be a single line containing a positive integer.
+
+Output
+The output should be N rows containing numbers from 1 to N in each row.
+Note:There is a space after each number.
+
+Explanation
+For example, if the given number is 5 your code should print the following pattern.
+
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+
+Sample Input1
+5
+Output
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+
+Sample Input2
+3
+Output
+1 2 3
+1 2 3
+1 2 3
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int s=input.nextInt();
+        for(int i=0; i<s; i++) {
+            for(int j=1;j<=s;j++){
+               System.out.print(j+" ");   
+            }
+             System.out.println(); 
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String b="";
+        for(int i=1; i<=a; i++) {
+            String c=String.valueOf(i);
+            b=b+c+" ";
+        }
+        for(int i=0; i<a; i++) {
+           System.out.println(b); 
+        }
+    }
+}
+*/
+
+6.Numbers in Square Pattern-2
+
+Write a pogram to print numbers from 1 to N in each column forming a square pattern of N rows and N columns.
+
+Input 
+The input will be a single line containing a positive integer (N).
+
+Output
+The output should be N rows containing a number N times in each row.
+Note:There is a space after each number.
+
+Explanation
+For example, if the given number is 5 your code should print the following pattern.
+
+1 1 1 1 1 
+2 2 2 2 2 
+3 3 3 3 3
+4 4 4 4 4
+5 5 5 5 5
+
+Sample Input1
+5
+Output
+1 1 1 1 1 
+2 2 2 2 2 
+3 3 3 3 3
+4 4 4 4 4
+5 5 5 5 5
+
+Sample Input2
+4
+Output
+1 1 1 1 
+2 2 2 2
+3 3 3 3
+4 4 4 4
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int s=input.nextInt();
+        for(int i=1; i<=s; i++) {
+          for(int j=1; j<=s; j++) {  
+            System.out.print(i+" "); 
+          }
+          System.out.println();
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        for(int i=1; i<=a; i++) {
+            String c=String.valueOf(i);
+            String d=(c+" ").repeat(a);
+            System.out.println(d); 
+        }
+    }
+}
+*/
+
+7.Numbers in Rectangle Pattern-1
+
+Write a pogram to print numbers from 1 to N in each row dorming a rectangular pattern of M rows and N columns.
+
+Input 
+The first line of input contain a positive integer (M).
+The second line of input contain a positive integer (N).
+
+Output
+The output should be M number of lines and N number of columns with the numbers from 1 to N in each row.
+Note:There is a space after each number.
+
+Explanation
+For example, if the given numbers of rows are 2 and the number of columns is 3 your code should print the following pattern.
+
+1 2 3 
+1 2 3 
+
+Sample Input1
+2 
+3
+Output
+1 2 3 
+1 2 3 
+
+Sample Input2
+5
+4
+Output
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int l=input.nextInt();
+        int b=input.nextInt();
+        for(int i=0; i<l; i++) {
+          for(int j=1; j<=b; j++) {  
+            System.out.print(j+" "); 
+          }
+          System.out.println();
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int n=input.nextInt();
+        String b="";
+        for(int i=1; i<=n; i++) {
+            String c=String.valueOf(i);
+            b=b+c+" ";
+        }
+        for(int i=0; i<m; i++) {
+           System.out.println(b); 
+        }
+    }
+}
+*/
+
+8.Numbers in Rectangular Pattern-2
+
+Write a pogram to print numbers from 1 to M in each column forming a rectangular pattern of M rows and N columns.
+
+Input 
+The first line of input will contain a positive integer (M).
+The second line of input will contain a positive integer (N).
+
+Output
+The output should be the M number of rows and N number of columns containing a number N times in each row.
+Note:There is a space after each number.
+
+Explanation
+For example, if the given numbers of rows are 2 and the number of columns is 3 your code should print the following pattern.
+
+1 1 1 
+2 2 2  
+
+Sample Input1
+2 
+3
+Output
+1 1 1  
+2 2 2 
+
+Sample Input2
+5
+4
+Output
+1 1 1 1 
+2 2 2 2
+3 3 3 3
+4 4 4 4
+5 5 5 5
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int l=input.nextInt();
+        int b=input.nextInt();
+        for(int i=1; i<=l; i++) {
+          for(int j=1; j<=b; j++) {  
+            System.out.print(i+" "); 
+          }
+          System.out.println();
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int n=input.nextInt();
+        for(int i=1; i<=m; i++) {
+            String c=String.valueOf(i);
+            String d=(c+" ").repeat(n);
+            System.out.println(d); 
+        }
+    }
+}
+*/
+
+9.Solid Diamond
+
+Write a program to print a solid diamond of 2N-1 rows using the asterisk character(*).
+
+Input 
+The input will be single line containing a positive integer (N).
+
+Output
+The output should be of 2N-1 rows containing an asterisk(*) character in a solid diamond pattern.
+Note:There is a space after each asterisk(*) character.
+
+Explanation
+For example, if the given number is 3, your code should print the following pattern
+
+  * 
+ * * 
+* * * 
+ * * 
+  * 
+
+Sample Input1
+3
+Output 
+  * 
+ * * 
+* * * 
+ * * 
+  * 
+  
+Sample Input1
+5
+Output 
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        int n,i,j,space=1;
+        Scanner input=new Scanner(System.in);
+        n=input.nextInt();
+        space=n-1;
+        for(i=1; i<=n; i++) {
+            System.out.print(" ".repeat(space));
+            space--;
+            System.out.print("* ".repeat(i));
+            System.out.println("");
+        }
+        space=1;
+         for(i=1; i<=n-1; i++) {
+            System.out.print(" ".repeat(space));
+            space++;
+            System.out.print("* ".repeat(n-i));
+            System.out.println("");
+        }
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int k=n-1;
+        for(int i=1; i<=n; i++) {
+            String spaces=" ".repeat(k);
+            String stars="* ".repeat(i);
+            System.out.println(spaces+stars);
+            k=k-1;
+        }
+        k=n;
+        for(int i=1; i<n; i++) {
+            String spaces=" ".repeat(i);
+            String stars="* ".repeat(k-i);
+            System.out.println(spaces+stars);
+        }
+    }
+}
+*/

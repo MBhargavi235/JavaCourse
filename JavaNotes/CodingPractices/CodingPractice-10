@@ -1,0 +1,437 @@
+1.Date Format 
+
+Write a program to convert the date from "dd-mm-yy" format to "dd/mm/yy" format
+
+Input
+The input will be a single line containing a string.
+
+Output
+The output should be a single line containing the date in "dd/mm//yy" format.
+
+Explanation
+For example, if the given input date is in the format "07-11-2020", your code should print the date by replacing hypens ("-") with forward-slashes.
+So the output should be "70/11/2020".
+
+Sample Input1
+07-11-2020
+Output 
+07/11/2020 
+
+Sample Input1
+12-10-2222
+Output 
+12/10/2222 
+
+Solution 
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String date=input.nextLine();
+        String format=date.replace("-","/");
+        System.out.println(format);
+    }
+}
+
+2.Lowercase & Uppercase
+
+Write a program that prints the given word in two variants.
+First Variant: Convert all the letters in the given word to lowercase.
+Second Variant:Convert all the letters in the given word to uppercase.
+
+Input
+The input will be a single line containing a string.
+
+Output
+The first line of output should contain the given word in lowercase.
+The second line of output should contain the given word in uppercase.
+
+Explanation
+For example, if the given word is "Learning", your code should print all the letters of the word in lowercase ("learning"), and in uppercase ("LEARNING").
+
+Sample Input1
+Learning
+Output 
+learning
+LEARNING
+
+Sample Input1
+Transportation
+Output 
+transportation
+TRANSPORTATION
+
+Solution 
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String swap=input.nextLine();
+        System.out.println(swap.toLowerCase());
+        System.out.println(swap.toUpperCase());
+    }
+}
+
+3.Palindrome
+
+Given a string,write a program to check if it is a palindrome or not. 
+Palindrome is a string that remains the same whien written in reverse.
+Note: Ignore the case difference (uppercase and lowercase) when comparing letters.
+
+Input
+The input will be a single line containing a string.
+
+Output
+The output should be a single line containing either "Palindrome" or "Not a Palindrome".
+
+Explanation
+For example, if the given string is "Madam", the output should be "Palindrome",
+as the word remains the same when written in reverse.
+Similarly, if the given string is "Rover", the output should be "Not a Palindrome",
+as the word not remain the same when written in reverse.
+
+Sample Input1
+Madam
+Output 
+Palindrome
+
+Sample Input1
+ROVER
+Output 
+Not a Palindrome
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String word=input.nextLine();
+        word=word.toLowerCase();
+        int n=word.length();
+        Boolean isPalindrome=true;
+        for (int i=0;i<n/2;i++){
+            if (word.charAt(i)==word.charAt(n-i-1)){
+                continue;
+            }
+            else 
+                isPalindrome=false;
+        }
+        String str=(isPalindrome)?"Palindrome":"Not a Palindrome";
+        System.out.println(str);
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=a.toLowerCase();
+        
+        String c="";
+        for (int i=0;i<b.length();i++){
+            c=b.charAt(i)+c;
+        }
+        if(b.equals(c)){
+          System.out.println("Palindrome");  
+        }
+        else{
+            System.out.println("Not a Palindrome");
+        }
+    }
+}
+*/
+
+4.Valid Password
+
+Write a program to check whether the given password is valid or not.
+Consider the password to be valid if it contains at least one digit.
+
+Input
+The input will be a single line containing a string.
+
+Output
+The output should be a single line containing either "Valid Password" or "Invalid Password".
+
+Explanation
+For example, if the given password is "Qwerty00", the output should be "Valid Password", as it contains a digit.
+Whereas, if the given string is "Dashboard", the output should be "Invalid Password", as it does not contain a digit.
+
+Sample Input1
+Qwerty00
+Output 
+Valid Password
+
+Sample Input1
+Dashboard
+Output 
+Invalid Password
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String password=input.nextLine();
+        Boolean containDigit=false;
+        Boolean isDigit;
+         for(int i=0;i<password.length();i++){
+             isDigit=Character.isDigit(password.charAt(i));
+		     if(isDigit) 
+		       containDigit=true;
+		    }
+		 String isValid=(containDigit)?"Valid Password":"Invalid Password";
+		 System.out.print(isValid);
+    }
+}
+
+/*import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        int count=0;
+         for(int i=0;i<a.length();i++)
+		    {
+		        if(a.charAt(i) >= '0' && a.charAt(i) <= '9'){
+		            count++;
+		            
+		        }
+		    }
+		 if(count>=1){
+			 System.out.print("Valid Password");
+		 }
+		 else{
+		    System.out.print("Invalid Password");
+		 }
+    }
+}
+*/
+
+5.Valid Password-2
+
+Write a program to check whether the given password is valid or not.
+Consider the password to be valid if it contains at least one uppercase letter.
+
+Input
+The input will be a single line containing a string.
+
+Output
+The output should be a single line containing either "Valid Password" or "Invalid Password".
+
+Explanation
+For example, if the given password is "Qwerty00", the output should be "Valid Password", as it contains a uppercase letter.
+Whereas, if the given string is "stadium", the output should be "Invalid Password", as it does not contain a uppercase letter.
+
+Sample Input1
+Qwerty00
+Output 
+Valid Password
+
+Sample Input1
+stadium
+Output 
+Invalid Password
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String swap=input.nextLine();
+        String password="Invalid Password";
+        int n=swap.length();
+         for(int i=0;i<n;i++){
+		    if(Character.isUpperCase(swap.charAt(i)))
+		           password="Valid Password";
+		        break;
+		  }
+		 System.out.print(password);
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        int count=0;
+         for(int i=0;i<a.length();i++)
+		    {
+		        char b=a.charAt(i);
+		        if(Character.isUpperCase(b)){
+		            count++;
+		        }
+		    }
+		 if(count>=1){
+			 System.out.print("Valid Password");
+		 }
+		 else{
+		    System.out.print("Invalid Password");
+		 }
+    }
+}
+*/
+
+6.Valid Password-3
+
+Write a program to check whether the given password is valid or not.
+Consider the password to be valid if it contains at least one uppercase letter, one lowecase letter, and one digit.
+
+Input
+The input will be a single line containing a string.
+
+Output
+The output should be a single line containing either "Valid Password" or "Invalid Password".
+
+Explanation
+For example, if the given password is "Qwerty00", the output should be "Valid Password", as it contains an  
+uppercase letter, lowecase letter, and a digit.
+Whereas, if the given string is "Dashboard", the output should be "Invalid Password", as it does not contain a digit.
+
+Sample Input1
+Qwerty00
+Output 
+Valid Password
+
+Sample Input1
+stadium
+Output 
+Invalid Password
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String swap=input.nextLine();
+        Boolean isUpper=false, isLower=false, isDigit=false;
+         for(int i=0;i<swap.length();i++){
+		        if(Character.isLowerCase(swap.charAt(i)))
+		            isLower=true;
+		        else if(Character.isUpperCase(swap.charAt(i)))
+		            isUpper=true;
+		        else if(Character.isDigit(swap.charAt(i)))
+		            isDigit=true;
+		  }
+		 String isValid=(isLower&&isUpper&&isDigit)?"Valid Password":"Invalid Password";
+		 System.out.print(isValid);
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        int count=0,count1=0,count2=0;
+         for(int i=0;i<a.length();i++)
+		    {
+		        char b=a.charAt(i);
+		        if(b >= '0' && b <= '9'){
+		            count++;
+		        }
+		        if(Character.isLowerCase(b)){
+		            count1++;
+		        }
+		        if(Character.isUpperCase(b)){
+		            count2++;
+		        }
+		    }
+		 if(count>=1&&count1>=1&&count2>=1){
+			 System.out.print("Valid Password");
+		 }
+		 else{
+		    System.out.print("Invalid Password");
+		 }
+    }
+}
+*/
+
+7.Swap Case 
+
+Given a word, write a program to convert all the uppercase letters to lowercase letters and vice versa.
+
+Input 
+The input will be a single line containing a string.
+
+Output
+The output should be a single line containing the modified word.
+
+Explanation
+For example, if the given word is "Coding", your code should print the output by swapping the case of all letters ("cODING")
+
+Sample Input1
+Coding
+Output
+cODING
+
+Sample Input2
+HUMANS
+Output
+humans
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String swap=input.nextLine();
+        String swapCase="";
+         for(int i=0;i<swap.length();i++){
+		        char s=Character.isLowerCase(swap.charAt(i)) ? Character.toUpperCase(swap.charAt(i))
+		            :Character.toLowerCase(swap.charAt(i));
+		          swapCase+=s;
+		 }
+		 System.out.println(swapCase);
+    }
+}
+
+/*
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String c="";
+         for(int i=0;i<a.length();i++)
+		    {
+		        char b=a.charAt(i);
+		          if(Character.isLowerCase(b)){
+		            
+		            c+=Character.toUpperCase(b);
+		        }
+		        else if(Character.isUpperCase(b)){
+		            
+		            c+=Character.toLowerCase(b);
+		        }
+		        else{
+		            c+=" ";
+		        }
+		    }
+		    System.out.print(c);
+    }
+}
+*/

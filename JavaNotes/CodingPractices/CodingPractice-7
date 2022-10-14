@@ -1,1 +1,522 @@
+1.Print Integers
 
+Write a program to print integers from 1 to the given integer (N).
+
+Input 
+The first line of input will contain a positive integer.
+
+Ouput
+the output should be of N lines, printing an integer in each line.
+
+Explanation 
+For example, if the given number is 3, your code should print the 
+1
+2
+3
+Similarly, if the given number is 5, your code should print the 
+1
+2
+3
+4
+5
+
+Sample Input1
+3
+Ouput 
+1 
+2 
+3
+
+Sample Input2
+5
+Ouput
+1 
+2 
+3 
+4 
+5 
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int counter=1;
+        while(counter<=a){
+            System.out.println(counter);
+            counter+=1;
+        }
+    }
+}
+
+2.Print Integers-2
+
+Given two integer numbers M and N, write a program to print integers from M to N.
+
+Input 
+The first line of input will contain an integer.
+The second line of input will contain an integer.
+
+Ouput
+the output should be printing an integer in each line, starting from M to N.
+
+Explanation 
+For example, if the given numbers are 2 and 6, the  output should be
+2
+3
+4
+5
+6
+Similarly, if the given numbers are -2 and 2, the output should be
+-2 
+-1
+0
+1 
+2
+
+Sample Input1
+2 
+6
+Ouput 
+2 
+3
+4
+5
+6
+
+Sample Input2
+-2 
+2 
+Ouput
+-2 
+-1 
+0
+1 
+2 
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int n=input.nextInt();
+        for(int i=m;i<=n;i++){
+            System.out.println(i);
+        }
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        while(a<=b){
+            System.out.println(a);
+            a+=1;
+        }
+    }
+}
+*/
+
+3. Solid Reactangle
+
+Given two integers M and N, write a program to print a solid rectangle pattern of M rows and N columns
+using the asterisk character (*).
+
+Input 
+The first line of input will contain a psotive integer.
+The second line of input will contain a psotive integer.
+
+Ouput
+the output should be the M numbers of lines and N number of columns with the asterisk character(*).
+Note: There is a space after each asterisk character(*).
+
+Explanation 
+For example, if the given numbers of rows are 2 and the number of columns is 3, the  output should be
+2 lines and 3 columns with the asterisk character (*).
+
+* * *
+* * *
+
+Sample Input1
+2 
+3
+Ouput 
+* * *
+* * *
+
+Sample Input2
+4
+6
+Ouput
+* * * * * *
+* * * * * *
+* * * * * *
+* * * * * *
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int m=input.nextInt();
+        int n=input.nextInt();
+        String stars="* ".repeat(n);
+        for (int i=0;i<m;i++){
+            System.out.println(stars);
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int counter=1;
+        while(counter<=a){
+            System.out.println("* ".repeat(b));
+            counter+=1;
+        }
+    }
+}
+*/
+
+4.Sum of Natural Numbers
+
+Given an integer number (N) as input. Write a program to print the sum of first N natural numbers. 
+
+Input 
+The first line of input will contain a positive integer.
+
+Ouput
+the output should be a single line containing the sum of first N natural numbers.
+
+Explanation 
+For example, if the given number is 6, the sum of the first 6 natural numbers which is 
+(1+2+3+4+5+6).So the output should be 21. 
+For example, if the given number is 3, the sum of the first 3 natural numbers which is 
+(1+2+3).So the output should be 6. 
+
+Sample Input1
+6
+Ouput 
+21
+
+Sample Input2
+3
+Ouput
+6
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        long num=input.nextLong();
+        long counter=1;
+        long total=0;
+        while(counter<=num){
+            total=total+counter;
+            counter=counter+1;
+        }
+        System.out.println(total);
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        long sum=0;
+        int counter=1;
+        while(counter<=a){
+            sum+=counter;
+            counter+=1;
+        }
+        System.out.println(sum);
+    }
+}
+*/
+
+5.Read N Inputs
+
+Given an integer N, Write a program which reads N Inputs and prints them.
+
+Input 
+The first line of input will contain a positive integer N.
+The following N lines will contain an integer in each line.
+
+Ouput
+the output should be N lines, containing an integer per line.
+
+Explanation 
+For example, if the given N is 3, then read the inputs in the next 3 lines and print them.
+If the given input integers in the next three lines are 8,11,25, the output should be 
+8
+11
+25
+
+Sample Input1
+3
+8
+11
+25
+Ouput 
+8
+11
+25
+
+Sample Input2
+2 
+7
+20
+Ouput
+7
+20
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int count=1;
+        while(count<=n){
+            int a=input.nextInt();
+            System.out.println(a);
+            count+=1;
+        }
+        input.close();
+    }
+}
+
+6.Sum of the Given Numbers
+
+Given an integer N, write a program which reads N Inputs and prints the sum of the given input integers.
+
+Input 
+The first line of input will contain a positive integer N.
+The next N lines will contain the integers, each in a line.
+
+Ouput
+the output should be the sum of the given input integers.
+
+Explanation 
+For example, if the given N is 3, then read the inputs in the next 3 lines and print them the sum of the 
+three input integers.
+If the given input integers in the next three lines are 8,11,25, the output should be 44
+
+Sample Input1
+3
+8
+11
+25
+Ouput 
+44
+
+Sample Input2
+2 
+7
+20
+Ouput
+27
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=input.nextInt();
+        }
+        System.out.println(sum);
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int count=1;
+        long sum=0;
+        while(count<=n){
+            int a=input.nextInt();
+            sum+=a;
+            count+=1;
+        }
+        System.out.println(sum);
+    }
+}
+*/
+
+7.Solid Square
+
+Write a program to print a solid square pattern of N rows and N columns using the asterisk character(*), where integer N is given as an input.
+
+Input 
+The first line of input will contain a positive integer.
+
+Output
+The  should be the N number of liens and N number of columns with the asterisk character (*).
+Note: There is a space after each asterisk character(*).
+
+Explanation
+For example, if the given number is 4, your code should print the following pattern
+* * * *
+* * * * 
+* * * * 
+* * * *
+For example, if the given number is 2, your code should print the following pattern
+* * 
+* *
+
+Sample Input1
+4
+Output
+* * * *
+* * * * 
+* * * * 
+* * * *
+
+Sample Input2
+2 
+Output
+* * 
+* *
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        String stars="* ".repeat(a);
+        for(int i=0;i<a;i++){
+            System.out.println(stars);
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int counter=1;
+        while(counter<=a){
+            System.out.println("* ".repeat(a));
+            counter+=1;
+        }
+        
+    }
+}
+*/
+
+8.Solid Right Angled Triangle
+
+Given an integer number (N) as input. Write a program to print  the right-angled triangular pattern 
+of N lines using an asterisk character(*).
+
+Input 
+The input will be a single line containing a positive integer (N).
+
+Output
+The  output should be N lines with an asterisk(*) character printing in a right-angled triangular pattern.
+Note: There is a space after each asterisk(*) character.
+
+Explanation
+For example, if the given number is 4, the should output be
+* 
+* * 
+* * *  
+* * * *
+For example, if the given number is 2, your code should print the following pattern
+* 
+* *
+
+Sample Input1
+4
+Output
+* 
+* *  
+* * * 
+* * * *
+
+Sample Input2
+2 
+Output
+*  
+* *
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        for(int i=1;i<=n;i++){
+            String s="";
+            for(int j=0;j<i;j++){
+                s+=("* ");
+            }
+            System.out.println(s);
+        }
+        input.close();
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int counter=1;
+        while(counter<=a){
+            System.out.println("* ".repeat(counter));
+            counter+=1;
+        }
+        
+    }
+}
+*/

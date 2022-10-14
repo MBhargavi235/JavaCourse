@@ -1,0 +1,57 @@
+1.Maximum number of Handshakes
+
+It was Raj's first day of school. His teacher Anu asked the students to meet every other student in the 
+class and to introduce themselves. The teacher asked them to do handshakes when they meet each other.
+If there are N number of students in the class then write a program to print the total number of handshakes
+made by the students.
+
+Input
+The first line is a single integer N.
+
+Output
+Prin the value representing total number of handshakes.
+
+Explanation
+In the given example there are 5 persons.
+The first person shakes his hand with 4 persons. 
+The second person then shakes his hand with 3 persons.
+The third person shakes his hand with 2 persons. 
+The fourth person shakes his hand with 1 person.
+From this, the number of handshakes = 4 + 3 + 2 + 1
+So, the output should be 10.
+
+Sample Input 1
+5
+Sample Output 1
+10
+Sample Input 2
+3
+Sample Output 2
+3
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=a*(a-1)/2;
+        System.out.println(b);
+    }
+}
+
+2.Denominations-2
+
+The possible denominations of currency notes are 100,50,20 and 10. A to be withdrawn is given as input.
+Write a program to break the amount into minimum number of bank notes.
+
+Input 
+The first line of input is an integer A 
+
+Output
+The output should be a string represting number of 100,50,20,10 notes possible
+
+

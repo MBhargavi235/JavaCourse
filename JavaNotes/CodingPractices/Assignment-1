@@ -1,0 +1,241 @@
+1.Print in Reverse Order - 2
+
+You are given two strings as input. Write a program to print the given two strings in reverse order separated by "---".
+
+Input
+The first and second line of input are strings.
+
+Explanation
+In the example, the given strings are Apple, Banana . So now we have to reverse the order of strings to Banana, Apple and add a separation line between the two strings.
+
+So the output should be
+Banana
+---
+Apple
+
+Sample Input1
+Apple 
+Banana
+Output
+Banana
+---
+Apple
+
+Sample Input2
+Car
+Bike
+Output
+Bike
+---
+Car
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=input.nextLine();
+        System.out.println(b);
+        System.out.println("---");
+        System.out.println(a);
+    }
+}
+
+2.First Letters
+
+You are given three strings as input. Write a program to print the first character of each string.
+
+Input
+The first, second, and third lines of input are strings.
+
+Explanation
+Consider the given strings to be apple, banana , and carrot . We need to consider the first character in each of these strings. 
+We get the character a from the first string apple , we get the character b from the second string banana, and we get the character c 
+from the third string carrot . So the final output should be abc.
+
+Sample Input 1
+apple
+banana 
+carrot
+Output
+abc
+
+Sample Input2
+Very
+Important 
+Person
+Output
+VIP
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=input.nextLine();
+        String c=input.nextLine();
+        String d=(String.valueOf(a.charAt(0)));
+        String e=(String.valueOf(b.charAt(0)));
+        String f=(String.valueOf(c.charAt(0)));
+        System.out.println(d+e+f);
+    }
+}
+
+3.Half String - 2
+
+Write a program that prints the second half of the given input string. You can assume that the length of the input string will always be an even number.
+
+Input
+The first line of input is a string.
+
+Output
+The output should be a string.
+
+Explanation
+In the given string messages , the length of the string is 8. The last 4 characters i.e The second half of the string is ages.
+So the output should be ages.
+
+Sample Input 1
+messages
+Output
+ages
+
+Sample Input 2
+time
+Output
+me
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        System.out.println(a.substring(a.length()/2));
+    }
+}
+
+4.First & Last Digits
+
+Given a four-digit number N as input. Write a program to print first and last digit of the number.
+
+Input
+The input is a four-digit number N.
+
+Output
+Print the first digit in the first line and the last digit in the second line.
+
+Sample Input1
+1456
+Output 
+1
+6
+Sample Input 2
+9821
+Output
+9
+1
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        System.out.println(String.valueOf(a.charAt(0)));
+        System.out.println(String.valueOf(a.charAt(a.length()-1)));
+    }
+}
+ 
+5.Area and Perimeter of Square
+You are given a side of a square as input. Write a program to find the perimeter and area of the square.
+
+Input
+The input is an integer representing the length of the side of the square.
+
+Output
+The first line of the output should contain area of the square, and the second line of the output should contain the perimeter of the square as per the format shown in the sample output.
+
+Explanation
+Given the length of the side is 2.
+As the area of square is side*side and the perimeter of the square is 4*side
+Then output should be
+
+Area of the square is: 4
+Perimeter of the square is: 8
+
+Sample Input1
+3
+Output 
+Area of the square is: 9
+Perimeter of the square is: 12
+Sample Input 2
+4
+Output
+Area of the square is: 16
+Perimeter of the square is: 16
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=a*a;
+        int c=4*a;
+        String d=(String.valueOf(b));
+        String e=(String.valueOf(c));
+        System.out.println("Area of the square is: "+d);
+        System.out.println("Perimeter of the square is: "+e);
+
+    }
+}
+
+6.Women Population
+
+In a town, the percentage of men is 52 and the rest are women( W ). The total population( T ) of town is given as input.
+Write a program to print the total number of women in the town.
+
+Input
+The first line of input is an integer T.
+
+Output
+The output should be an integer representing the total number of women in the town.
+
+Explanation
+Given total population 80000 . Then the number of women should be
+80000 X 48 / 100 = 38400 So the output should be 38400 .
+
+Sample Input1
+80000
+Output 
+38400
+Sample Input 2
+100000
+Output
+48000
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=(48*a)/100;
+        System.out.println(b);
+    }
+}

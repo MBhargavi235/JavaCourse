@@ -102,3 +102,162 @@ Output
 + + + +
 
 Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        for (int i=1;i<=a;i++){
+                System.out.println("+ ".repeat(b));
+        }
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int counter=1;
+        while(counter<=a){
+            System.out.println("+ ".repeat(b));
+            counter+=1;
+        }
+        
+    }
+}
+*/
+
+3.Product of the Given Numbers
+
+Given an integer N , write a program that reads N inputs and prints the product of the given input integers.
+Note: Use for-loop.
+Input
+The first line of input is a positive integer, N The next N lines each contain an integer.
+.
+Output
+The output should be the product of the given input integers.
+Explanation
+In the given example, N = 3 and the input integers are 2, 3, and 7 So, the output should be 2 x 3 x 7 = 42.
+
+Sample Input1
+3
+2
+3
+7
+Output
+42
+
+Sample Input2
+4 
+11
+2 
+4 
+9
+Output 
+792
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        long a=input.nextLong();
+        long product=1;
+        for(long i=1;i<=a;i++){
+            int b=input.nextInt();
+            product*=b;
+        }
+        System.out.println(product);
+    }
+}
+
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int counter=1;
+        long product=1;
+        while(counter<=a){
+            int b=input.nextInt();
+            product*=b;
+            counter+=1;
+        }
+        System.out.println(product);
+    }
+}
+*/
+
+4.Solid Right Angled Triangle - 2
+
+Given an integer number N as input. Write a program to print the right-angled triangular pattern of N lines as shown below.
+Note: There is a space after each asterisk ( * ) character.
+
+Input
+The first line of input is an integer N.
+
+Explanation
+In the given example, the solid right-angled triangle of side 5. Therefore, the output should be
+
+          * 
+        * * 
+      * * * 
+    * * * * 
+  * * * * * 
+  
+Sample Input1
+4
+Output
+          * 
+        * * 
+      * * * 
+    * * * * 
+Sample Input2
+6
+Output
+              * 
+            * * 
+          * * * 
+        * * * * 
+      * * * * * 
+    * * * * * * 
+  
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        for(int i=1;i<=a;i++){
+            System.out.println("  ".repeat(a-i)+"* ".repeat(i));
+        }
+    }
+}
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int counter=1;
+        while(counter<=a){
+            System.out.println("  ".repeat(a-counter)+"* ".repeat(counter));
+            counter+=1;
+        }
+    }
+}
+*/

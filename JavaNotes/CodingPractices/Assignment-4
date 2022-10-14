@@ -1,0 +1,125 @@
+1.Calculate Double or Triple
+
+Write a program to print the triple of number N if it is a multiple of 3 otherwise, double of N.
+
+Input
+The first line is an integer N.
+
+Output
+The output should be an integer based on the above conditions.
+
+Explanation
+In the given example N = 3 , As 3 is a multiple of 3, we multiply the value by 3. So, the output should be 9.
+
+Sample Input1
+3
+Output
+9
+
+Sample Input2
+4
+Output
+8
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        if(a%3==0){
+         System.out.println(a*3);   
+        }
+        else{
+           System.out.println(a*2); 
+        }
+    }
+}
+
+2. Smallest Remainder
+
+You are given two integers, a and b. Print the smallest value among a%b and b%a.
+
+Input
+The first line of input is an integer a. The second line of input is an integer b.
+
+Explanation
+In the given example, a = 3, b = 7
+The value of a%b is 3 and the value of b%a is 1 . As the smallest of the two is 1 , so the output should be 1.
+
+Sample Input1
+3
+7
+Output
+1
+
+Sample Input2
+12
+6
+Output
+0
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=a%b;
+        int d=b%a;
+        if(c>d){
+         System.out.println(d);   
+        }
+        else{
+           System.out.println(c); 
+        }
+    }
+}
+
+3. Uncommon Number
+
+Given a number N , find whether the number is common or uncommon. A number is considered uncommon if it is not divisible by any of the single-digit primes.
+
+Input
+The first line of input is an integer N.
+
+Output
+The output should be a single line containing True if it satisfies the given conditions, False in all other cases.
+
+Explanation
+In the given example, N = 5633 the number is not divisible by 2, 3, 5, 7 . So, the number is an uncommon number.Therefore, the output should be True .
+
+Sample Input1
+5633
+Output
+True
+
+Sample Input2
+1000
+Output
+False
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a =input.nextInt();
+        if(a%2==0||a%3==0||a%5==0||a%7==0){
+            System.out.println("False");
+        }
+        else{
+           System.out.println("True"); 
+        }
+    }
+}
+

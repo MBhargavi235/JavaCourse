@@ -158,6 +158,7 @@ class Main{
 }
  
 5.Area and Perimeter of Square
+
 You are given a side of a square as input. Write a program to find the perimeter and area of the square.
 
 Input
@@ -239,3 +240,70 @@ class Main{
         System.out.println(b);
     }
 }
+
+7.String Repetition - 4
+
+You are given a string. Repeat the same string N times separated by space.
+
+Explanation
+In the given example the string is messages, N = 3 . So we have to repeat the string three times. Then we get messages messages messages as output.
+
+Sample Input1
+messages
+Output
+messages messages messages
+Sample Input2
+pop
+Output
+pop pop pop pop
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        int b=input.nextInt();
+        System.out.println((a+" ").repeat(b));
+    }
+}
+
+8. Years, Weeks & Days
+
+Given N number of days as input, write a program to convert N number of days to years ( Y ), weeks ( W ) and days (D ).
+Note: Take 1 year = 365 days.
+
+Input
+The input contains single integer N.
+
+Output
+Print in each new line Y, W and D.
+
+Explanation
+Given N = 1329 . The value can be written as
+1329 = 3 years + 33 weeks + 3 days
+
+So the output should be
+3
+33
+3
+
+Sample Input1
+1329
+Output
+3
+33
+3
+Sample Input2
+0
+Output
+0
+0
+0
+
+Solution
+
+

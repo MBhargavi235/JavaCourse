@@ -165,7 +165,8 @@ Input
 The input is an integer representing the length of the side of the square.
 
 Output
-The first line of the output should contain area of the square, and the second line of the output should contain the perimeter of the square as per the format shown in the sample output.
+The first line of the output should contain area of the square, and the second line of the output should contain the perimeter of the square
+as per the format shown in the sample output.
 
 Explanation
 Given the length of the side is 2.
@@ -306,4 +307,18 @@ Output
 
 Solution
 
+import java.util.*;
 
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int years=a/365;
+        int weeks=(a-(years*365))/7;
+        int days=((a-(years*365))-(weeks*7));
+        System.out.println(years);
+        System.out.println(weeks);
+        System.out.println(days);
+    }
+}

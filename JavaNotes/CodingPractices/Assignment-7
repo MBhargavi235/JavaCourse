@@ -1,0 +1,104 @@
+1.Print Integers-3
+
+You are given an integer N as input. Write a program to print integers from N to 1.
+Note: Use For Loop.
+
+Input 
+The first line of input is an integer N.
+
+Explanation
+
+In the given example, N=5 the integers from 5 to 1 are 5,4,3,2,1
+
+Therefore, the output should be 
+5
+4
+3 
+2
+1
+
+Sample Input1
+5
+Output
+5
+4
+3
+2
+1 
+
+Sample Input2
+3
+Output
+3
+2 
+1
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        for(int i=0;i<a;i++){
+            System.out.println(a-i);
+        }
+    }
+}
+/*
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int counter=1;
+        while(counter<=a){
+            System.out.println(a);
+            a-=1;
+        }
+        
+    }
+}
+*/
+
+2.Solid Rectangle - 2
+
+Write a program to print a rectangle pattern of M rows and N columns using the plus character ( + ).
+
+
+Note: There is a space after each plus + character.
+Note: Use for loop.
+Input
+The first line of input is an integer M.
+The second line of input is an integer N.
+
+Explanation
+In the given example, 3 rows and 5 columns.
+Therefore, the output should be
+
++ + + + +
++ + + + +
++ + + + +
++ + + + +
++ + + + +
+
+Sample Input1
+3
+5
+Output
++ + + + +
++ + + + +
++ + + + +
+
+Sample Input2
+4
+4
+Output
++ + + +
++ + + +
++ + + +
++ + + +
+
+Solution

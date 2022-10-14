@@ -1,0 +1,261 @@
+1.Day Name
+
+Given day number D name as input, write a program to display the day.
+(1 - Monday, 2 - Tuesday, 3 - Wednesday, 4 - Thursday, 5 - Friday, 6 - Saturday, 7 - Sunday)
+
+Input
+The first line of input is an integer D.
+
+Output
+The output should be a string representing the day name.
+
+Explanation
+For example, if D = 3 then, according to the day number, the day should be Wednesday .
+
+Sample Input1
+3
+Output
+Wednesday
+
+Sample Input2
+2 
+Tuesday
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        if(a==1){
+            System.out.println("Monday");
+        }
+        else if(a==2){
+            System.out.println("Tuesday");
+        }
+        else if(a==3){
+            System.out.println("Wednesday");
+        }
+        else if(a==4){
+            System.out.println("Thursday");
+        }
+        else if(a==5){
+            System.out.println("Friday");
+        }
+        else if(a==6){
+            System.out.println("Saturday");
+        }
+        else{
+           System.out.println("Sunday");
+        }
+    }
+}
+
+2.Relation between two numbers 2
+
+Write a program to print the relation between two numbers, A and B.
+
+Input
+The first line is an integer A. 
+The second line is an integer B.
+
+Output
+Print A == B if A and B are equal.
+Print A>B if A is greater than B.
+Print A<B if A is less than B.
+
+Explanation
+Given A = 3, B = 4 As 3 < 4, the output should be A<B.
+
+Sample Input1
+3
+4
+Output
+A < B
+
+Sample Input2
+4
+4
+A == B
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        if(a==b){
+            System.out.println("A == B");
+        }
+        else if(a>b){
+            System.out.println("A > B");
+        }
+        else{
+           System.out.println("A < B");
+        }
+    }
+}
+
+3.Profit or Loss
+
+The amount at which a product is sold by the seller is known as the Selling Price. The amount at which the seller has acquired the product is known as the Cost Price.
+If the Selling Price of a product is higher than its cost price, then the seller has made a profit. If it is lesser, then the seller has incurred loss selling that 
+product. If the Selling Price is equal to the Cost Price, it means the seller has made No Profit and No loss, by selling the product.
+Given Cost price CP and selling price SP of a product, write a program to determine whether the seller made a profit, incurred loss, or made no profit or loss.
+
+Input
+The first line is an integer CP. The second line is an integer SP.
+
+Output
+Print Profit or Loss or No Profit - No Loss based on CP and SP.
+
+Explanation
+In the given example CP=143, SP=155, So as the selling price is higher than the cost price, the output should be Profit.
+
+Sample Input1
+143
+155
+Output
+Profit
+
+Sample Input2
+165
+125
+Output
+Loss
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int cp=input.nextInt();
+        int sp=input.nextInt();
+        if(sp>cp){
+            System.out.println("Profit");
+        }
+        else if(sp<cp){
+            System.out.println("Loss");
+        }
+        else{
+           System.out.println("No Profit - No Loss");
+        }
+    }
+}
+
+4. Weather condition
+
+Write a program to display a customized message based on temperature T.
+
+Input
+The first line is a real number T.
+
+Output
+Print Freezing weather if T< 0 Print Very Cold weather if 0 <= T < 10 Print Cold weather if 10 <= T < 20 Print Normal 
+if 20 <= T < 30 Print Hot if 30 <= T < 40 Print Very Hotif T >= 40.
+
+Explanation
+In the given example, the temperature is -50.0 . As the temperature is less than 0 , the output should be Freezing weather.
+
+Sample Input1
+-50.0 
+Output
+Freezing weather
+
+Sample Input2
+5.7
+Output
+Very Cold weather
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        float t=input.nextFloat();
+        if(t<0){
+            System.out.println("Freezing weather");
+        }
+        else if(t>=0 && t<10){
+            System.out.println("Very Cold weather");
+        }
+        else if(t>=10 && t<20){
+            System.out.println("Cold weather");
+        }
+        else if(t>=20 && t<30){
+            System.out.println("Normal");
+        }
+        else if(t>=30 && t<40){
+            System.out.println("Hot");
+        }
+        else{
+           System.out.println("Very Hot");
+        }
+    }
+}
+
+5.Leap Year
+
+Write a program to determine whether the given year Y is a leap year or not.
+A normal year consists of 365 days. But the time required for Earth to revolve around the Sun is around 365.2425 days. So a "leap year" of 366 days 
+is used once every four years to eliminate the error caused by three normal (but short) years. Any year that is divisible by 4 is usually a leap year:
+for example, 1988, 1992, and 1996 are leap years.
+However, there is still a small error that must be accounted for. To eliminate this error, the calendar considers that a year that is divisible by 100 
+(for example, 1900) is a leap year only if it is also divisible by 400. For this reason, the following years are not leap years:
+1700, 1800, 1900, 2100, 2200, 2300, 2500, 2600, ... This is because they are divisible by 100 but not by 400.
+The following years are leap years: 1600, 2000, 2400 This is because they are divisible by both 100 and 400.
+
+Input 
+The first line is an integer 
+
+Output
+The output should be a single line containing True if it satisfies the given conditions, False in all other cases.
+
+Explanation
+In the given example Y=2016, the year 2016 is a leap year.
+So the output should be True 
+
+Sample Input1
+2016
+Output
+True
+
+Sample Input2
+1800
+Output
+False
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a =input.nextInt();
+        if(a%100==0 && a%400==0){
+            System.out.println("True");
+        }
+        else if(a%4==0 && a%100!=0){
+            System.out.println("True");
+        }
+        else{
+           System.out.println("False");
+        }
+    }
+}
+

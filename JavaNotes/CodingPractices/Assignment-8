@@ -1,0 +1,96 @@
+1.Find Power of Number
+
+Given an integer N , and exponent M as input, write a program to calculate N power M without using the power function.
+
+Input
+The first line of input is an integer N. The second line of input is an integer M.
+
+Output
+The output should be an integer representing the N power M.
+
+Explanation
+Given
+N = 2, M= 3 2^3=8 So, the output should be 8.
+
+Input Constraints
+0<=N, M<=10
+
+Sample Input1
+2
+3
+Output
+8
+
+Sample Input1
+3
+1
+Output
+3
+
+Solution
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        long product=1;
+        while(b!=0){
+            product*=a;
+            b--;
+        }
+        System.out.println(product);
+    }
+}
+
+2.Product of Numbers from M to N
+
+Given two integers M , N . Write a program to print the product of numbers in the range M and N (inclusive of M and N).
+
+Input
+The first line of input is an integer M . The second line of input is an integer N.
+
+Explanation
+In the given example, the product of numbers between the range
+2 and 5 is 2 * 3 * 4 * 5 . Therefore, the output should be 120.
+
+Input Constraints
+1 <= M <= 100 
+1<= N <= 120
+
+Sample Input1
+2
+5
+Output
+120
+
+Sample Input1
+1
+4
+Output
+24
+
+Solution
+
+import java.util.*;
+import java.math.BigInteger;
+import java.math.BigDecimal;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        long a=input.nextLong();
+        long b=input.nextLong();
+        long product=1;
+        for(long i=a;i<=b;i++){
+            product*=i;
+        }
+        String str = String.valueOf(product);
+        BigInteger bigNum = new BigInteger(str);
+        System.out.println(bigNum);
+    }
+}
+
+3.

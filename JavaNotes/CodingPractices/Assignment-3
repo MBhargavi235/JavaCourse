@@ -1,0 +1,261 @@
+1.Honor Student
+
+In a school, the students are divided into two categories based on their ranks. Students whose rank is less than 10 are considered as
+HONOR STUDENT and all others are considered as NORMAL STUDENT . Based on the rank, find to which category a student belongs.
+
+Input
+The first line of input is an integer.
+
+Explanation
+In the given example, rank = 9 . As the rank is less than 10, the student is considered an honor student. So the output should be HONOR STUDENT
+
+Sample Input1
+1
+Output 
+HONOR STUDENT
+
+Sample Input1
+15
+Output 
+NORMAL STUDENT
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        if(a<10){
+            System.out.println("HONOR STUDENT");
+        }
+        else{
+           System.out.println("NORMAL STUDENT"); 
+        }
+    }
+}
+
+2.Positive or Negative
+
+A number N is given as input. Write a program to check if N positive or negative.
+
+Input
+Given an number (float) N as input.
+
+Output
+The output should be a string that can be either Positive or Negative
+
+Explanation
+In the given example N = -12.5 . As the value of N is less than O, the output should be Negative .
+
+Sample Input1
+-12.5
+Output 
+Negative
+
+Sample Input2
+15.2
+Output 
+Positive
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        float a=input.nextFloat();
+        if(a>0){
+            System.out.println("Positive");
+        }
+        else{
+           System.out.println("Negative"); 
+        }
+    }
+}
+
+3. Increment the number
+
+Write a program to increment N by 5, if N is greater than 10, otherwise by 1.
+
+Input
+The first line of input is an integer N
+.
+Output
+Print the output obtained after performing operations as mentioned above.
+
+Explanation
+For example, if the value of N is 3 as it is less than 10, The N value increments by 1. So the output should be 4.
+
+Sample Input1
+3
+Output 
+4
+
+Sample Input2
+63
+Output 
+68
+
+Solution 
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        if(a>10){
+            System.out.println(a+5);
+        }
+        else{
+           System.out.println(a+1); 
+        }
+    }
+}
+
+4. Relation b/w Numbers
+
+Write a program to print the relation between two numbers, X and Y.
+
+Input
+The first line has an integer X. The second line has an integer Y.
+
+Output
+Print X<Y if X is less than Y otherwise, print X >= Y.
+
+Explanation
+Given X = 2 ,Y = 5 As 2 <5 (X<Y) So the output should be X<Y
+
+Sample Input1
+2
+5
+Output
+X < Y 
+
+Sample Input2
+5
+2 
+Output
+x >=Y
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+   
+        if(a<b){
+         System.out.println("X < Y");   
+        }
+     
+        else{
+           System.out.println("X >= Y"); 
+        }
+    }
+}
+
+5.Sum or Product
+
+Write a program to print the sum of two numbers, A and B . If their sum is less than 10, otherwise print the product of numbers.
+
+Input
+The first line is an integer A. The second line is an integer B.
+
+Output
+The output should be an integer.
+
+Explanation
+A = 1, B = 2 . Their sum is 2 + 1 In the given example which is less than 10.
+So, the output should be 3.
+
+Sample Input1
+1
+2
+Output
+3
+
+Sample Input2
+42
+10
+Output
+420
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+   
+        if(a+b<10){
+         System.out.println(a+b);   
+        }
+     
+        else{
+           System.out.println(a*b); 
+        }
+    }
+}
+
+6. Smallest Among 3 Numbers
+
+Write a program to print the smallest value among the three numbers A, B, and C.
+
+Input
+The first line is an integer A. The second line is an integer B. The third line is an integer C.
+
+Explanation
+In the given values A = 6, B = 5, C = 4 . 4 is the smallest value among the three. So the output should be 4.
+
+Sample Input1
+6
+5
+4
+Output
+4
+
+Sample Input2
+-10000
+-10000
+-10000
+Output
+-10000
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=input.nextInt();
+        if(a<b&&a<c){
+         System.out.println(a);   
+        }
+        else if(b<c){
+            System.out.println(b); 
+        }
+        else{
+           System.out.println(c); 
+        }
+    }
+}
+

@@ -16,7 +16,7 @@ Sample Input1
 Output
 1234
 
-Sample Input1
+Sample Input2
 5
 Output
 12345
@@ -42,6 +42,7 @@ class Main {
 }
 
 2.Hollow Right Triangle
+
 Given an integer number N as input. Write a program to print the hollow right-angled triangular pattern of N lines as shown below.
 Note: There is a space after each asterisk ( * ) character.
 
@@ -63,7 +64,7 @@ Output
     * * 
       *
 
-Sample Input1
+Sample Input2
 5
 Output
 * * * * * * 
@@ -95,3 +96,221 @@ class Main {
     }
 }
 
+3.Hollow Right Triangle - 2
+
+Given an integer number N as input. Write a program to print the hollow right-angled triangular pattern of N lines as shown below.
+Note: There is a space after each asterisk ( * ) character.
+
+Input
+The first line of input is an integer N.
+
+Explanation
+In the given example the hollow right angled triangle of side 5. Therefore, the output should be
+
+      *
+    * * 
+  *   * 
+* * * * 
+
+Sample Input1
+4
+Output
+      *
+    * * 
+  *   * 
+* * * *
+
+Sample Input2
+5
+Output
+        *
+      * *
+    *   *
+  *     *
+* * * * *
+
+Solution
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        //System.out.println(a);
+        for(int i=0;i<a;i++){
+            if(i==a-1){
+              System.out.println("* ".repeat(a));
+            }
+            else if (i==0){ 
+                System.out.println("  ".repeat(a-1) + "*"); 
+            }
+            else{
+                System.out.println("  ".repeat(a-i-1) +"* " +"  ".repeat(i-1) + "* " );
+            }
+        }
+    }
+}
+
+
+4. Right Angled Triangle - 3
+
+Given an integer number N as input. Write a program to print the right-angled triangular pattern of N rows as shown below.
+
+Input
+The first line of input is a positive integer.
+
+Explanation
+For example, if the given number is 5 , the output should be
+______
+|    /
+|   /
+|  /
+| /
+|/
+
+Sample Input1
+5
+Output
+______
+|    /
+|   /
+|  /
+| /
+|/
+
+Sample Input2
+7
+Output
+________
+|      /
+|     /
+|    /
+|   /
+|  /
+| /
+|/
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        System.out.println("_".repeat(n+1));
+        for (int i=1;i<=n;i++){
+            System.out.println("|"+" ".repeat(n-i)+"/");
+        }
+    }
+}
+
+5.Solid Right Angled Triangle - 2
+
+Given an integer number N as input. Write a program to print the right-angled triangular pattern of N lines as shown below.
+Note: There is a space after each asterisk ( * ) character.
+
+Input
+The first line of input is an integer N.
+
+Explanation
+In the given example, the solid right-angled triangle of side 5. Therefore, the output should be
+
+      * 
+    * * 
+  * * * 
+* * * * 
+
+Sample Input1
+4
+Output
+      * 
+    * * 
+  * * * 
+* * * *
+
+Sample Input2
+6
+Output
+          * 
+        * * 
+      * * * 
+    * * * * 
+  * * * * * 
+* * * * * *
+
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n-i-1;j++){
+                System.out.print("  ");
+            }
+            for(int j=0;j<i+1;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+6.Inverted Solid Right Triangle
+
+Given an integer number N as input. Write a program to print the right-angled triangular pattern of N lines as shown below.
+Note: There is a space after each asterisk ( * ) character.
+
+Input
+The first line of input is an integer N.
+
+Explanation
+In the given example the solid right angled triangle of side 4. Therefore, the output should be
+
+* * * * 
+  * * * 
+    * * 
+      * 
+      
+ Sampple Input1
+ 4
+ Output
+ * * * * 
+  * * * 
+    * * 
+      * 
+Sample Input2
+6
+Output
+* * * * * 
+  * * * * 
+    * * * 
+      * * 
+        *
+        
+Solution
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) { 
+        // Write your code here
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        for(int i=0;i<n;i++){
+            for(int j=1;j<i+1;j++){
+                System.out.print("  ");
+            }
+            for(int j=0;j<n-i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}

@@ -1,0 +1,169 @@
+1. Indivisible Numbers
+
+You are given a positive integer N . Your task is to find the number of positive integers K <= N 
+such that K is not divisible by any of the following numbers 2, 3, 4, 5, 6, 7, 8, 9, 10 .
+
+Input
+The first line of input is an integer N.
+
+Output
+The output should be an integer representing the number of positive integers satisfying the above condition.
+
+Explanation
+In the given example, 11 is not divisible by any number from 2 to 10. It is divisible by only 1, 11 . So, the output should be 2.
+
+Sample Input1
+11
+Output
+2
+
+Sample Input2
+12
+Output
+2
+
+Sample Input3
+200
+Output
+47
+
+Sample Input4
+10
+Output
+1 
+
+Solution
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int count=0;
+        for(int i=1;i<=n;i++){
+            Boolean is_divisible=false;
+            for(int j=2;j<=10;j++){
+                if(i%j==0)
+                is_divisible=true;
+            }
+        if (is_divisible==false)
+            count+=1;
+        }
+        System.out.println(count);
+    }
+}
+
+2.Half Pyramid - 3
+
+Given an integer N as a starting number and K as input, write a program to print a number pyramid of K rows as shown below.
+
+Input
+The first line of input is an integer N . 
+The second line of input is an integer K.
+
+Explanation
+In the example, the given starting number is 10, and the number of rows in the pyramid is 5.
+So, the output should be
+
+10 
+11 12 
+13 14 15 
+16 17 18 19 
+20 21 22 23 24
+
+Sample Input1
+10
+5
+Output
+10 
+11 12 
+13 14 15 
+16 17 18 19 
+20 21 22 23 24
+
+Sample Input2
+1
+3
+Output
+1
+2 3 
+4 5 6 
+
+Solution
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int count=input.nextInt();
+        int n=input.nextInt();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<i+1;j++){
+            System.out.print(count+" ");
+            count+=1;
+            }
+        System.out.println();
+        }
+    }
+}
+
+
+3.Half Pyramid - 4
+
+Given an integer N as a starting number and K as input, write a program to print a number pyramid of K rows as shown below.
+
+Input
+The first line of input is an integer N. The second line of input is an integer K.
+
+Explanation
+In the example, the given starting number is 10 , and the number of rows in the pyramid is 5. So, the output should be
+
+24
+23 22 
+21 20 19 
+18 17 16 15 
+14 13 12 11 10
+
+Sample Input1
+10
+5
+Output
+24
+23 22 
+21 20 19 
+18 17 16 15 
+14 13 12 11 10
+
+Sample Input1
+1
+3
+Output
+6
+5 4 
+3 2 1
+
+Solution
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int n=input.nextInt();
+        int m=input.nextInt();
+        int p=n;
+        for(int i=0;i<m;i++){
+            p=p+i;
+        }    
+        int k=m+p;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<i+1;j++){
+            System.out.print((k-1)+" ");
+            k=k-1;
+            }
+        System.out.println();
+        }
+    }
+}

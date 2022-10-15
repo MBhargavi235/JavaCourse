@@ -21,7 +21,7 @@ Sample Input1
 Output
 8
 
-Sample Input1
+Sample Input2
 3
 1
 Output
@@ -66,7 +66,7 @@ Sample Input1
 Output
 120
 
-Sample Input1
+Sample Input2
 1
 4
 Output
@@ -93,4 +93,44 @@ class Main{
     }
 }
 
-3.
+3.Number of digits until N
+
+Given an integer N , write a program that prints the count of the total number of digits between 1 and N.
+
+Input
+The input is a positive integer.
+
+Output
+The output should be a single line containing the count of the digits up to the given number.
+
+Explanation
+Given N = 10 From 1 to 9, each number contains a single digit. From 10 onwards, the numbers contain two digits.
+So the output should be 9 + 2 = 11.
+
+Sample Input1
+10
+Output
+11
+
+Sample Input2
+4
+Output
+4
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String [] args){
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        int sum=0;
+        for(int i=1;i<=a;i++){
+            String s=String.valueOf(i); 
+            int c=s.length();
+            sum+=c;
+        }
+       System.out.println(sum); 
+    }
+}

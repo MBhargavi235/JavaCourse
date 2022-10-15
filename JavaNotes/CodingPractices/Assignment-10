@@ -1,0 +1,176 @@
+1.Palindrome - 2
+
+You are given a string, write a program to find whether the string is palindrome or not.
+Note: Treat uppercase letters and lowercase letters as same when comparing letters.
+
+Input
+The first line of input is a string.
+
+Output
+The output should be the string True or False .
+
+Explanation
+In the given example, the string Madam is a palindrome as we are treating M and m as equal. So, the output should be True.
+
+Sample Input1
+Madam
+Output
+True
+
+Sample Input2
+Treat
+Output
+False
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=a.toLowerCase();
+        
+        String c="";
+        for (int i=0;i<b.length();i++){
+            c=b.charAt(i)+c;
+        }
+        if(b.equals(c)){
+          System.out.println("True");  
+        }
+        else{
+            System.out.println("False");
+        }
+    }
+}
+
+
+2.Palindrome - 3
+
+You are given a string, write a program to find whether the string is palindrome or not.
+Note: Treat uppercase letters and lowercase letters as same when comparing letters. Ignore spaces and quotes within the string.
+
+Input
+The first line of input is a string.
+
+Output
+The output should be True or False .
+
+Explanation
+In the given example, the string No lemon no melon is a palindrome as we are ignoring spaces. So, the output should be True.
+
+Sample Input1
+No lemon no melon
+Output
+True
+
+Sample Input2
+Race Cars
+Output
+False
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String d=a.toLowerCase();
+        String e=d.replace(" ","");
+        String b=e.replace("'","");
+        String c="";
+        //System.out.println(b);
+        for (int i=0;i<b.length();i++){
+            c=b.charAt(i)+c;
+        }
+        if(b.equals(c)){
+          System.out.println("True");  
+        }
+        else{
+            System.out.println("False");
+        }
+    }
+}
+
+3.Remove Vowels in a Sentence
+
+You are given a sentence. Write a program to remove all the vowels in the given sentence.
+Note: Sentence has both lowercase and uppercase letters.
+
+Input
+The first line of input is a string N.
+
+Explanation
+In the example given a sentence Hello World , the sentence contains vowels e, o . So, the output should be Hll Wrld.
+
+Sample Input1
+Hello World
+Output
+Hll Wrld
+
+Sample Input2
+Once upon a time
+Output
+nc pn tm
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String a=input.nextLine();
+        String b=a.replaceAll("[AEIOUaeiou]","");
+        System.out.println(b);
+    
+    }
+}
+
+
+4.Letter, Digit or Special Character
+
+You are given a character as input. Check if the given input is a Lowercase Letter or Uppercase Letter or Digitor a Special Character .
+
+Input
+The first line of input is a single character N.
+
+Explanation
+In the given example character is 9. So, the output should be Digit.
+
+
+Sample Input1
+9
+Output
+Digit
+
+Sample Input2
+A
+Output
+Uppercase Letter
+
+Solution
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        char a=input.next().charAt(0);
+        if (Character.isUpperCase(a)){
+        System.out.println("Uppercase Letter");
+        }
+        else if (Character.isLowerCase(a)){
+        System.out.println("Lowercase Letter");
+        }
+        else if (Character.isDigit(a)){
+        System.out.println("Digit");
+        }
+        else{
+        System.out.println("Special Character");
+        }
+    }
+}

@@ -1,0 +1,97 @@
+1.Sum of 1 series
+
+Given integer N as input. Write a program to print the sum of series 1 + 11 + 111 + .... N terms.
+
+Input
+The first line of input is an integer N.
+
+Output
+The output should be an integer representing the sum of series.
+
+Explanation
+Given N = 4 The sum for first 4 terms is 1 + 11 + 111 + 1111 So the output should be 1234
+
+Sample Input1
+4
+Output
+1234
+
+Sample Input1
+5
+Output
+12345
+
+Solution
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        //System.out.println(a);
+        String b="1";
+        long sum=0;
+        for(int i=1;i<=a;i++){
+           String c=b.repeat(i);
+           long d=Long.parseLong(c);
+           sum+=d;
+        }
+        System.out.println(sum);
+    }
+}
+
+2.Hollow Right Triangle
+Given an integer number N as input. Write a program to print the hollow right-angled triangular pattern of N lines as shown below.
+Note: There is a space after each asterisk ( * ) character.
+
+Input
+The first line of input is an integer N.
+
+Explanation
+In the given example the hollow right angled triangle of side 4. Therefore, the output should be
+
+* * * * 
+  *   * 
+    * * 
+      *
+Sample Input1
+4
+Output
+* * * * 
+  *   * 
+    * * 
+      *
+
+Sample Input1
+5
+Output
+* * * * * * 
+  *       *
+    *     *
+      *   *
+        * *
+          *
+
+Solution
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        for(int i=0;i<a;i++){
+            if(i==0){
+              System.out.println("* ".repeat(a));
+            }
+            else if (i== a-1){ 
+                System.out.println("  ".repeat(a-1) + "*"); 
+            }
+            else{
+                System.out.println("  ".repeat(i) +"* " +"  ".repeat(a-i-2) + "* " );
+            }
+        }
+    }
+}
+
